@@ -15,7 +15,7 @@
     body {
       margin: 0;
       font-family: 'Playfair Display', serif;
-      background: linear-gradient(135deg, #f1e9e9, #e3cece);
+      background: linear-gradient(135deg, #e8adad, #d21117);
       color: #333;
       text-align: center;
       overflow-x: hidden;
@@ -177,43 +177,47 @@
     <div class="wave"></div>
   </div>
 
+  <!-- q and a script -->
   <script>
-    const qaPairs = [
-      { q: "How to be happy?", a: "Spread happiness to be happy." },
-      { q: "How do I feel Bhagavan?", a: "Accept His presence and then feel His power." },
-      { q: "What is sacred union?", a: "The harmony of love, spirit, and truth." }
-    ];
+  const qaPairs = [
+    { q: "How to be happy?", a: "Spread happiness to be happy." },
+    { q: "How do I feel Bhagavan?", a: "Accept His presence and then feel His power." },
+    { q: "What is sacred union?", a: "The harmony of love, spirit, and truth." }
+  ];
 
-    let currentIndex = 0;
-    const answerEl = document.getElementById("answer");
+  let currentIndex = 0;
+  const answerEl = document.getElementById("answer");
+  const questionEl = document.getElementById("typed-question");
 
-    function showNextQA() {
-      const { q, a } = qaPairs[currentIndex];
-      
-      // Initialize Typed.js for the question
-      new Typed("#typed-question", {
-        strings: [q],
-        typeSpeed: 50,
-        backSpeed: 20,
-        backDelay: 1000,
-        showCursor: false,
-        onComplete: () => {
-          // Show answer after typing
-          answerEl.textContent = a;
-          answerEl.classList.add("show");
+  function showQA(index) {
+    const { q, a } = qaPairs[index];
 
-          // Hide answer after 2s, then move to next
-          setTimeout(() => {
-            answerEl.classList.remove("show");
-            currentIndex = (currentIndex + 1) % qaPairs.length;
-            document.getElementById("typed-question").textContent = "";
-            showNextQA();
-          }, 2000);
-        }
-      });
-    }
+    // Clear old content
+    questionEl.textContent = "";
+    answerEl.textContent = "";
+    answerEl.classList.remove("show");
 
-    showNextQA();
-  </script>
+    // Start typing new question
+    const typed = new Typed("#typed-question", {
+      strings: [q],
+      typeSpeed: 50,
+      showCursor: false,
+      onComplete: () => {
+        // Show answer after typing finishes
+        answerEl.textContent = a;
+        answerEl.classList.add("show");
+
+        // Wait a bit before going to next Q
+        setTimeout(() => {
+          currentIndex = (currentIndex + 1) % qaPairs.length;
+          showQA(currentIndex);
+        }, 2500); // answer visible duration
+      }
+    });
+  }
+
+  showQA(currentIndex);
+</script>
+
 </body>
 </html>
