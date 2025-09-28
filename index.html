@@ -141,6 +141,62 @@
       0% { transform: translateX(0); }
       100% { transform: translateX(-50%); }
     }
+
+    /* Collage Section */
+.collage {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  margin: 4rem auto;
+  max-width: 1200px;
+  padding: 0 1rem;
+}
+
+.polaroid {
+  background: #fff;
+  padding: 0.7rem;
+  border-radius: 6px;
+  box-shadow: 0 8px 15px rgba(0,0,0,0.15);
+  width: 220px;
+  transform: rotate(-3deg);
+  transition: transform 0.3s ease;
+  text-align: center;
+  font-family: 'Playfair Display', serif;
+}
+
+.polaroid:nth-child(2) {
+  transform: rotate(3deg);
+}
+.polaroid:nth-child(3) {
+  transform: rotate(-2deg);
+}
+.polaroid:nth-child(4) {
+  transform: rotate(2deg);
+}
+.polaroid:nth-child(5) {
+  transform: rotate(-1deg);
+}
+
+.polaroid img {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+.polaroid p {
+  margin-top: 0.5rem;
+  font-size: 0.95rem;
+  color: #333;
+}
+
+.polaroid:hover {
+  transform: scale(1.05) rotate(0deg);
+  z-index: 5;
+}
+
+
+    
   </style>
 </head>
 <body>
@@ -218,6 +274,31 @@
 
   showQA(currentIndex);
 </script>
+
+<!-- Collage Section -->
+<section class="collage">
+  <div class="polaroid">
+    <img src="img1.jpg" alt="Image 1">
+    <p>building community</p>
+  </div>
+  <div class="polaroid">
+    <img src="img2.jpg" alt="Image 2">
+    <p>teaching design!</p>
+  </div>
+  <div class="polaroid">
+    <img src="img3.jpg" alt="Image 3">
+    <p>exchange in 🇰🇷</p>
+  </div>
+  <div class="polaroid">
+    <img src="img4.jpg" alt="Image 4">
+    <p>design girlies in Toronto!</p>
+  </div>
+  <div class="polaroid">
+    <img src="img5.jpg" alt="Image 5">
+    <p>snoopy once said ☝️</p>
+  </div>
+</section>
+
 
 </body>
 </html>
