@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Our Sacred Union</title>
 
-  <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;500&family=Source+Serif+Pro:ital,wght@1,400&display=swap" rel="stylesheet">
 
   <!-- Typed.js CDN -->
   <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
@@ -14,8 +14,7 @@
   <style>
     body {
       margin: 0;
-      font-family: 'Playfair Display', serif;
-      background: linear-gradient(135deg, #e8adad, #d21117);
+      background: var(--blue-gradient, linear-gradient(102deg, #FBFAFA -0.22%, #F7F8FA 84.88%, #BDE0FF 97.97%, #B9DFFF 103.64%));
       color: #333;
       text-align: center;
       overflow-x: hidden;
@@ -45,40 +44,66 @@
     }
     .navbar .links a {
       text-decoration: none;
-      color: #333;
-      font-weight: 500;
-      font-size: 1rem;
-      transition: color 0.3s;
-    }
-    .navbar .links a:hover {
-      color: #666;
+      color: #353635;
+      font-family: "DM Sans", sans-serif;
+      font-size: 24px;
+      font-weight: 300;
+      line-height: 100px;
     }
     .navbar .cta button {
-      background: #333;
-      color: #fff;
+      display: flex;
+      width: 105px;
+      height: 48px;
+      justify-content: center;
+      align-items: center;
+      color: #353635;
+      text-align: center;
+      font-family: "DM Sans", sans-serif;
+      font-size: 24px;
+      font-weight: 300;
       border: none;
-      padding: 0.6rem 2.5rem;
-      border-radius: 20px;
-      font-size: 1rem;
+      background: transparent;
       cursor: pointer;
-      transition: background 0.3s;
     }
     .navbar .cta button:hover {
-      background: #555;
+      opacity: 0.7;
     }
 
     /* Hero Section */
     .hero {
       padding-top: 8rem;
       padding-bottom: 3rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
     .hero h1 {
-      font-size: 3rem;
-      margin-bottom: 1rem;
+      display: flex;
+      width: 1277px;
+      height: 224px;
+      justify-content: center;
+      color: #D21117;
+      text-align: center;
+      font-family: "DM Sans", sans-serif;
+      font-size: 128px;
+      font-weight: 300;
+      line-height: 100px;
+      letter-spacing: -3px;
+      margin: 0;
     }
     .hero p {
-      font-size: 1.3rem;
-      margin-bottom: 3rem;
+      display: flex;
+      width: 563px;
+      height: 137px;
+      justify-content: center;
+      color: #D21117;
+      text-align: center;
+      font-family: "Source Serif Pro", serif;
+      font-size: 48px;
+      font-style: italic;
+      font-weight: 400;
+      line-height: 50px;
+      margin: 2rem auto 3rem auto;
     }
 
     /* Q&A Section */
@@ -89,21 +114,20 @@
       margin-bottom: 4rem;
     }
     .search-box {
+      width: 572px;
+      height: 58px;
+      border-radius: 200px;
+      background: #B9DFFF;
       display: flex;
       align-items: center;
-      border: 1px solid #ccc;
-      border-radius: 30px;
-      background: #fff;
-      padding: 0.8rem 1.2rem;
+      justify-content: center;
       font-size: 1.2rem;
-      min-width: 300px;
-      max-width: 600px;
       margin-bottom: 1rem;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      font-family: "DM Sans", sans-serif;
     }
     .search-box span {
       flex: 1;
-      text-align: left;
+      text-align: center;
     }
     .answer {
       font-size: 1.1rem;
@@ -116,87 +140,47 @@
       opacity: 1;
     }
 
-    /* Waves Section */
-    .waves {
-      position: relative;
-      width: 100%;
-      height: 200px;
-      margin-top: 3rem;
-      overflow: hidden;
-    }
-    .wave {
-      position: absolute;
-      bottom: 0;
-      width: 200%;
-      height: 100%;
-      background: rgba(255,255,255,0.6);
-      border-radius: 100% 50%;
-      animation: waveAnimation 8s linear infinite;
-    }
-    .wave:nth-child(2) {
-      background: rgba(255,255,255,0.3);
-      animation-duration: 12s;
-    }
-    @keyframes waveAnimation {
-      0% { transform: translateX(0); }
-      100% { transform: translateX(-50%); }
-    }
-
     /* Collage Section */
-.collage {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1.5rem;
-  margin: 4rem auto;
-  max-width: 1200px;
-  padding: 0 1rem;
-}
+    .collage {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1.5rem;
+      margin: 4rem auto;
+      max-width: 1200px;
+      padding: 0 1rem;
+    }
 
-.polaroid {
-  background: #fff;
-  padding: 0.7rem;
-  border-radius: 6px;
-  box-shadow: 0 8px 15px rgba(0,0,0,0.15);
-  width: 220px;
-  transform: rotate(-3deg);
-  transition: transform 0.3s ease;
-  text-align: center;
-  font-family: 'Playfair Display', serif;
-}
+    .polaroid {
+      background: #fff;
+      padding: 0.7rem;
+      border-radius: 6px;
+      box-shadow: 0 8px 15px rgba(0,0,0,0.15);
+      width: 220px;
+      transform: rotate(-3deg);
+      transition: transform 0.3s ease;
+      text-align: center;
+      font-family: 'Playfair Display', serif;
+    }
+    .polaroid:nth-child(2) { transform: rotate(3deg); }
+    .polaroid:nth-child(3) { transform: rotate(-2deg); }
+    .polaroid:nth-child(4) { transform: rotate(2deg); }
+    .polaroid:nth-child(5) { transform: rotate(-1deg); }
 
-.polaroid:nth-child(2) {
-  transform: rotate(3deg);
-}
-.polaroid:nth-child(3) {
-  transform: rotate(-2deg);
-}
-.polaroid:nth-child(4) {
-  transform: rotate(2deg);
-}
-.polaroid:nth-child(5) {
-  transform: rotate(-1deg);
-}
-
-.polaroid img {
-  width: 100%;
-  height: auto;
-  border-radius: 4px;
-}
-
-.polaroid p {
-  margin-top: 0.5rem;
-  font-size: 0.95rem;
-  color: #333;
-}
-
-.polaroid:hover {
-  transform: scale(1.05) rotate(0deg);
-  z-index: 5;
-}
-
-
-    
+    .polaroid img {
+      width: 100%;
+      height: auto;
+      border-radius: 4px;
+    }
+    .polaroid p {
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #333;
+    }
+    .polaroid:hover {
+      transform: scale(1.05) rotate(0deg);
+      z-index: 5;
+    }
   </style>
 </head>
 <body>
@@ -227,78 +211,64 @@
     <div class="answer" id="answer"></div>
   </section>
 
-  <!-- Waves Section -->
-  <div class="waves">
-    <div class="wave"></div>
-    <div class="wave"></div>
-  </div>
-
   <!-- q and a script -->
   <script>
-  const qaPairs = [
-    { q: "How to be happy?", a: "Spread happiness to be happy." },
-    { q: "How do I feel Bhagavan?", a: "Accept His presence and then feel His power." },
-    { q: "What is sacred union?", a: "The harmony of love, spirit, and truth." }
-  ];
+    const qaPairs = [
+      { q: "How to be happy?", a: "Spread happiness to be happy." },
+      { q: "How do I feel Bhagavan?", a: "Accept His presence and then feel His power." },
+      { q: "What is sacred union?", a: "The harmony of love, spirit, and truth." }
+    ];
 
-  let currentIndex = 0;
-  const answerEl = document.getElementById("answer");
-  const questionEl = document.getElementById("typed-question");
+    let currentIndex = 0;
+    const answerEl = document.getElementById("answer");
+    const questionEl = document.getElementById("typed-question");
 
-  function showQA(index) {
-    const { q, a } = qaPairs[index];
+    function showQA(index) {
+      const { q, a } = qaPairs[index];
+      questionEl.textContent = "";
+      answerEl.textContent = "";
+      answerEl.classList.remove("show");
 
-    // Clear old content
-    questionEl.textContent = "";
-    answerEl.textContent = "";
-    answerEl.classList.remove("show");
+      new Typed("#typed-question", {
+        strings: [q],
+        typeSpeed: 50,
+        showCursor: false,
+        onComplete: () => {
+          answerEl.textContent = a;
+          answerEl.classList.add("show");
+          setTimeout(() => {
+            currentIndex = (currentIndex + 1) % qaPairs.length;
+            showQA(currentIndex);
+          }, 2500);
+        }
+      });
+    }
 
-    // Start typing new question
-    const typed = new Typed("#typed-question", {
-      strings: [q],
-      typeSpeed: 50,
-      showCursor: false,
-      onComplete: () => {
-        // Show answer after typing finishes
-        answerEl.textContent = a;
-        answerEl.classList.add("show");
+    showQA(currentIndex);
+  </script>
 
-        // Wait a bit before going to next Q
-        setTimeout(() => {
-          currentIndex = (currentIndex + 1) % qaPairs.length;
-          showQA(currentIndex);
-        }, 2500); // answer visible duration
-      }
-    });
-  }
-
-  showQA(currentIndex);
-</script>
-
-<!-- Collage Section -->
-<section class="collage">
-  <div class="polaroid">
-    <img src="img1.jpg" alt="Image 1">
-    <p>image 1</p>
-  </div>
-  <div class="polaroid">
-    <img src="img2.jpg" alt="Image 2">
-    <p>image 2</p>
-  </div>
-  <div class="polaroid">
-    <img src="img3.jpg" alt="Image 3">
-    <p>image 3</p>
-  </div>
-  <div class="polaroid">
-    <img src="img4.jpg" alt="Image 4">
-    <p>image 4</p>
-  </div>
-  <div class="polaroid">
-    <img src="img5.jpg" alt="Image 5">
-    <p>image 5</p>
-  </div>
-</section>
-
-
+  <!-- Collage Section -->
+  <section class="collage">
+    <div class="polaroid">
+      <img src="img1.jpg" alt="Image 1">
+      <p>image 1</p>
+    </div>
+    <div class="polaroid">
+      <img src="img2.jpg" alt="Image 2">
+      <p>image 2</p>
+    </div>
+    <div class="polaroid">
+      <img src="img3.jpg" alt="Image 3">
+      <p>image 3</p>
+    </div>
+    <div class="polaroid">
+      <img src="img4.jpg" alt="Image 4">
+      <p>image 4</p>
+    </div>
+    <div class="polaroid">
+      <img src="img5.jpg" alt="Image 5">
+      <p>image 5</p>
+    </div>
+  </section>
 </body>
 </html>
