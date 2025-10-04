@@ -1,0 +1,34 @@
+<script>
+  const qaPairs = [
+    { q: "How to be happy?", a: "Spread happiness to be happy." },
+    { q: "How do I feel Bhagavan?", a: "Accept His presence and then feel His power." },
+    { q: "What is sacred union?", a: "The harmony of love, spirit, and truth." }
+  ];
+
+  let currentIndex = 0;
+  const answerEl = document.getElementById("answer");
+  const questionEl = document.getElementById("typed-question");
+
+  function showQA(index) {
+    const { q, a } = qaPairs[index];
+    questionEl.textContent = "";
+    answerEl.textContent = "";
+    answerEl.classList.remove("show");
+
+    new Typed("#typed-question", {
+      strings: [q],
+      typeSpeed: 50,
+      showCursor: false,
+      onComplete: () => {
+        answerEl.textContent = a;
+        answerEl.classList.add("show");
+        setTimeout(() => {
+          currentIndex = (currentIndex + 1) % qaPairs.length;
+          showQA(currentIndex);
+        }, 2500);
+      }
+    });
+  }
+
+  showQA(currentIndex);
+</script>

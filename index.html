@@ -1,209 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Our Sacred Union</title>
 
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500&family=Source+Serif+Pro:ital,wght@1,400&family=Inter:wght@400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500&family=Source+Serif+Pro:ital,wght@1,400&family=Inter:wght@400&display=swap" rel="stylesheet" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/styles.css" />
 
   <!-- Typed.js -->
   <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-
-  <style>
-    body {
-      margin: 0;
-      background: linear-gradient(180deg, #FBFAFA 0%, #F7F8FA 60%, #BDE0FF 100%);
-      color: #333;
-      font-family: "DM Sans", sans-serif;
-      overflow-x: hidden;
-    }
-
-    /* Navbar */
-    .navbar {
-      width: 100%;
-      display: flex;
-      justify-content: flex-end;
-      align-items: center;
-      gap: 1.5rem;
-      padding: 1rem 1.5rem;
-      position: absolute;
-      top: 0;
-      left: 0;
-    }
-    .navbar a {
-      text-decoration: none;
-      color: #353635;
-      font-size: 18px;
-      font-weight: 400;
-      text-transform: lowercase;
-    }
-    .navbar .start-btn {
-      background: #B9DFFF;
-      padding: 0.4rem 1.2rem;
-      border-radius: 6px;
-      font-size: 18px;
-      font-weight: 500;
-      text-transform: lowercase;
-      border: none;
-      cursor: pointer;
-    }
-
-    /* Hero Section */
-    .hero {
-      min-height: 100vh;
-      padding-top: 10rem;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-    }
-    .hero h1 {
-      color: #D21117;
-      font-family: "DM Sans", sans-serif;
-      font-size: 72px;
-      font-weight: 400;
-      text-transform: lowercase;
-      margin: 0;
-      opacity: 0;
-      transform: translateY(20px);
-      animation: fadeInUp 1.5s ease forwards;
-    }
-    .hero p {
-      color: #D21117;
-      font-family: "Source Serif Pro", serif;
-      font-size: 28px;
-      font-style: italic;
-      margin-top: 0.8rem;
-      margin-bottom: 2rem;
-    }
-
-    @keyframes fadeInUp {
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    /* Q&A Bubble */
-    .search-box {
-      width: 572px;
-      height: 58px;
-      border-radius: 200px;
-      background: #B9DFFF;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.2rem;
-      color: #353635;
-      overflow: hidden;
-    }
-    .answer {
-      font-size: 1.1rem;
-      color: #555;
-      min-height: 2rem;
-      opacity: 0;
-      transition: opacity 0.8s ease-in-out;
-      margin-top: 1rem;
-    }
-    .answer.show {
-      opacity: 1;
-    }
-
-    /* Scroll Section */
-    .section {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 100vh;
-      background: #fff;
-    }
-    .left-box {
-      width: 50%;
-      height: 100%;
-      background: #E10606;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    .circle-design {
-      position: relative;
-      width: 460px;
-      height: 460px;
-    }
-    .circle-design .outer {
-      width: 455px;
-      height: 455px;
-      border-radius: 50%;
-      border: 3px solid #FFF;
-      position: absolute;
-      top: 0;
-      left: 0;
-    }
-    .circle-design .oval {
-      width: 298px;
-      height: 236px;
-      border-radius: 50%;
-      border: 3px solid #FFF;
-      position: absolute;
-      top: 110px;
-      left: 80px;
-    }
-    .circle-design .oval:nth-child(2) {
-      transform: rotate(90deg);
-    }
-    .circle-design .oval:nth-child(3) {
-      transform: rotate(45deg);
-    }
-    .circle-design .oval:nth-child(4) {
-      transform: rotate(-45deg);
-    }
-    .circle-design .center {
-      width: 118px;
-      height: 118px;
-      border-radius: 50%;
-      background: #C2DFFE;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-    }
-
-    .right-box {
-      width: 50%;
-      padding: 3rem;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: flex-start;
-    }
-    .tagline {
-      background: #D21117;
-      color: white;
-      padding: 0.3rem 1rem;
-      font-size: 20px;
-      font-weight: 300;
-      margin-bottom: 1rem;
-    }
-    .headline {
-      color: #D21117;
-      font-size: 96px;
-      font-weight: 300;
-      line-height: 1;
-      margin: 0 0 1.5rem 0;
-      letter-spacing: -2px;
-    }
-    .body-text {
-      color: #4B4E53;
-      font-family: Inter, sans-serif;
-      font-size: 28px;
-      font-weight: 400;
-      line-height: 1.3;
-    }
-  </style>
 </head>
-
+<body>
 <body>
   <!-- Navbar -->
   <nav class="navbar">
@@ -212,18 +23,17 @@
     <button class="start-btn">start now</button>
   </nav>
 
-  <!-- Hero -->
+  <!-- Hero Section -->
   <section class="hero">
     <h1>our sacred union</h1>
-    <p> Something beautiful is on the way</p>
-    <!-- <p>Bring meaning to your marriage with Vedānta</p> -->
+    <p>Something beautiful is on the way</p>
     <div class="search-box">
       <span id="typed-question"></span>
     </div>
     <div class="answer" id="answer"></div>
   </section>
 
-  <!-- Second Section -->
+  <!-- Sacred Opportunity Section -->
   <section class="section">
     <div class="left-box">
       <div class="circle-design">
@@ -244,7 +54,7 @@
     </div>
   </section>
 
-  <!-- Q&A Script -->
+  <!-- QA Script -->
   <script>
     const qaPairs = [
       { q: "How to be happy?", a: "Spread happiness to be happy." },
@@ -279,5 +89,7 @@
 
     showQA(currentIndex);
   </script>
+</body>
+
 </body>
 </html>
