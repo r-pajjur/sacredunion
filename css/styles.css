@@ -230,7 +230,7 @@ body {
   box-shadow: 0 10px 20px 15px rgba(221, 206, 206, 0.25);
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: left;
 }
 .inner-box {
   width: 899px;
@@ -240,7 +240,7 @@ body {
   box-shadow: 0 10px 20px 15px rgba(221, 206, 206, 0.25);
   display: flex;
   align-items: center;
-  padding: 60px;
+  justify-content: left;
 }
 
 /* Content layout inside inner box */
@@ -288,6 +288,6 @@ body {
   background: #D21117;
 }
 .divider-icon {
-  margin-top: -150px; /* moves icon up into the line */
+  margin-top: -100px; /* moves icon up into the line */
 }
 
