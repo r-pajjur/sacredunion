@@ -220,10 +220,10 @@ body {
   box-shadow: 0 10px 20px 15px rgba(221, 206, 206, 0.25);
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: left;
 }
 .middle-box {
-  width: 1048px;
+  width: 1000px;
   height: 561px;
   border-radius: 10px;
   background: #FFF3F3;
