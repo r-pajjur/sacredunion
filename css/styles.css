@@ -379,7 +379,8 @@ body {
 
 /* shift bottom row slightly to the right */
 .shift-right {
-  transform: translateX(40px);
+  /* transform: translateX(40px); */
+  transform: none;
 }
 
 /* Modal styling */
@@ -433,7 +434,6 @@ body {
 
 .close-btn:hover {
   background: #7BC3FF;
-  color: #fff;
 }
 
 @keyframes fadeUp {
