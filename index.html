@@ -52,6 +52,7 @@
       </p>
     </div>
   </section>
+  
 
   <!-- QA Script -->
   <script>
@@ -122,5 +123,82 @@
       </div>
     </div>
   </section>
+
+  <section class="modules-section" id="modules">
+  <h1 class="modules-title">
+    A lifetime of <span class="blue">connection</span><br>
+    in just <span class="blue">10 workshops</span>
+  </h1>
+
+  <!--Modules section-->
+
+  <div class="module-grid">
+    <!-- 10 modules -->
+    <div class="module-box active" data-module="1">
+      <div class="module-circle"><div class="module-center"></div></div>
+      <div class="module-label">Module 1</div>
+    </div>
+    <div class="module-box" data-module="2"><div class="module-circle"><div class="module-center"></div></div><div class="module-label">Module 2</div></div>
+    <div class="module-box" data-module="3"><div class="module-circle"><div class="module-center"></div></div><div class="module-label">Module 3</div></div>
+    <div class="module-box" data-module="4"><div class="module-circle"><div class="module-center"></div></div><div class="module-label">Module 4</div></div>
+    <div class="module-box" data-module="5"><div class="module-circle"><div class="module-center"></div></div><div class="module-label">Module 5</div></div>
+    <div class="module-box" data-module="6"><div class="module-circle"><div class="module-center"></div></div><div class="module-label">Module 6</div></div>
+    <div class="module-box" data-module="7"><div class="module-circle"><div class="module-center"></div></div><div class="module-label">Module 7</div></div>
+    <div class="module-box" data-module="8"><div class="module-circle"><div class="module-center"></div></div><div class="module-label">Module 8</div></div>
+    <div class="module-box" data-module="9"><div class="module-circle"><div class="module-center"></div></div><div class="module-label">Module 9</div></div>
+    <div class="module-box" data-module="10"><div class="module-circle"><div class="module-center"></div></div><div class="module-label">Module 10</div></div>
+  </div>
+
+  <!-- Modal -->
+  <div class="modal" id="moduleModal">
+    <div class="modal-content">
+      <h2 id="moduleTitle">Module 1</h2>
+      <p id="moduleDescription">something beautiful is on the way. stay connected.</p>
+      <button class="close-btn" id="closeModal">Close</button>
+    </div>
+  </div>
+
+  <script>
+    const boxes = document.querySelectorAll(".module-box");
+    const modal = document.getElementById("moduleModal");
+    const moduleTitle = document.getElementById("moduleTitle");
+    const moduleDesc = document.getElementById("moduleDescription");
+    const closeModal = document.getElementById("closeModal");
+
+    const descriptions = {
+      1: "something beautiful is on the way. stay connected.",
+      2: "description for module 2 coming soon.",
+      3: "description for module 3 coming soon.",
+      4: "description for module 4 coming soon.",
+      5: "description for module 5 coming soon.",
+      6: "description for module 6 coming soon.",
+      7: "description for module 7 coming soon.",
+      8: "description for module 8 coming soon.",
+      9: "description for module 9 coming soon.",
+      10: "description for module 10 coming soon."
+    };
+
+    boxes.forEach(box => {
+      box.addEventListener("click", () => {
+        boxes.forEach(b => b.classList.remove("active"));
+        box.classList.add("active");
+
+        const moduleNum = box.getAttribute("data-module");
+        moduleTitle.textContent = `Module ${moduleNum}`;
+        moduleDesc.textContent = descriptions[moduleNum];
+        modal.style.display = "flex";
+      });
+    });
+
+    closeModal.addEventListener("click", () => {
+      modal.style.display = "none";
+    });
+
+    window.addEventListener("click", e => {
+      if (e.target === modal) modal.style.display = "none";
+    });
+  </script>
+</section>
+
 </body>
 </html>
