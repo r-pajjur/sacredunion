@@ -299,7 +299,6 @@ body {
   margin-top: -100px; /* moves icon up into the line */
 }
 
-/* Modules */
 /* ===============================
    MODULES SECTION
 ================================*/
@@ -312,13 +311,14 @@ body {
   padding: 6rem 2rem;
   text-align: center;
   background: linear-gradient(180deg, #FBFAFA 0%, #F7F8FA 60%, #BDE0FF 100%);
+  font-family: "Source Serif Pro", serif;
 }
 
 .modules-title {
   font-size: 72px;
   line-height: 1.1;
   color: #333;
-  font-weight: 400;
+  font-weight: 500;
   margin-bottom: 3rem;
 }
 
@@ -330,6 +330,7 @@ body {
   display: grid;
   grid-template-columns: repeat(5, 162px);
   gap: 2rem;
+  justify-content: center;
 }
 
 .module-box {
@@ -342,11 +343,11 @@ body {
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: transform 0.2s ease;
 }
 
-.module-box.active {
-  background: #B9DFFF;
+.module-box:hover {
+  transform: scale(1.05);
 }
 
 .module-circle {
@@ -369,12 +370,16 @@ body {
 }
 
 .module-label {
-  color: #7BC3FF;
+  color: #4B4E53;
   text-align: center;
-  font-family: "Inter", sans-serif;
   font-size: 20px;
-  font-weight: 700;
+  font-weight: 600;
   margin-top: 0.8rem;
+}
+
+/* shift bottom row slightly to the right */
+.shift-right {
+  transform: translateX(40px);
 }
 
 /* Modal styling */
@@ -402,7 +407,6 @@ body {
 
 .modal-content h2 {
   color: #7BC3FF;
-  font-family: "DM Sans", sans-serif;
   font-weight: 500;
   font-size: 48px;
   margin-bottom: 1rem;
@@ -410,7 +414,6 @@ body {
 
 .modal-content p {
   color: #4B4E53;
-  font-family: "Source Serif Pro", serif;
   font-size: 24px;
   font-style: italic;
   line-height: 1.4;
@@ -443,5 +446,6 @@ body {
     transform: translateY(0);
   }
 }
+
 
 

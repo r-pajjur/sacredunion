@@ -124,29 +124,56 @@
     </div>
   </section>
 
-  <section class="modules-section" id="modules">
+<section class="modules-section" id="modules">
   <h1 class="modules-title">
     A lifetime of <span class="blue">connection</span><br>
     in just <span class="blue">10 workshops</span>
   </h1>
 
-  <!--Modules section-->
-
   <div class="module-grid">
-    <!-- 10 modules -->
-    <div class="module-box active" data-module="1">
+    <!-- Top row (Modules 1–5) -->
+    <div class="module-box" data-module="1">
       <div class="module-circle"><div class="module-center"></div></div>
       <div class="module-label">Module 1</div>
     </div>
-    <div class="module-box" data-module="2"><div class="module-circle"><div class="module-center"></div></div><div class="module-label">Module 2</div></div>
-    <div class="module-box" data-module="3"><div class="module-circle"><div class="module-center"></div></div><div class="module-label">Module 3</div></div>
-    <div class="module-box" data-module="4"><div class="module-circle"><div class="module-center"></div></div><div class="module-label">Module 4</div></div>
-    <div class="module-box" data-module="5"><div class="module-circle"><div class="module-center"></div></div><div class="module-label">Module 5</div></div>
-    <div class="module-box" data-module="6"><div class="module-circle"><div class="module-center"></div></div><div class="module-label">Module 6</div></div>
-    <div class="module-box" data-module="7"><div class="module-circle"><div class="module-center"></div></div><div class="module-label">Module 7</div></div>
-    <div class="module-box" data-module="8"><div class="module-circle"><div class="module-center"></div></div><div class="module-label">Module 8</div></div>
-    <div class="module-box" data-module="9"><div class="module-circle"><div class="module-center"></div></div><div class="module-label">Module 9</div></div>
-    <div class="module-box" data-module="10"><div class="module-circle"><div class="module-center"></div></div><div class="module-label">Module 10</div></div>
+    <div class="module-box" data-module="2">
+      <div class="module-circle"><div class="module-center"></div></div>
+      <div class="module-label">Module 2</div>
+    </div>
+    <div class="module-box" data-module="3">
+      <div class="module-circle"><div class="module-center"></div></div>
+      <div class="module-label">Module 3</div>
+    </div>
+    <div class="module-box" data-module="4">
+      <div class="module-circle"><div class="module-center"></div></div>
+      <div class="module-label">Module 4</div>
+    </div>
+    <div class="module-box" data-module="5">
+      <div class="module-circle"><div class="module-center"></div></div>
+      <div class="module-label">Module 5</div>
+    </div>
+
+    <!-- Bottom row (Modules 6–10) -->
+    <div class="module-box shift-right" data-module="6">
+      <div class="module-circle"><div class="module-center"></div></div>
+      <div class="module-label">Module 6</div>
+    </div>
+    <div class="module-box shift-right" data-module="7">
+      <div class="module-circle"><div class="module-center"></div></div>
+      <div class="module-label">Module 7</div>
+    </div>
+    <div class="module-box shift-right" data-module="8">
+      <div class="module-circle"><div class="module-center"></div></div>
+      <div class="module-label">Module 8</div>
+    </div>
+    <div class="module-box shift-right" data-module="9">
+      <div class="module-circle"><div class="module-center"></div></div>
+      <div class="module-label">Module 9</div>
+    </div>
+    <div class="module-box shift-right" data-module="10">
+      <div class="module-circle"><div class="module-center"></div></div>
+      <div class="module-label">Module 10</div>
+    </div>
   </div>
 
   <!-- Modal -->
@@ -180,9 +207,6 @@
 
     boxes.forEach(box => {
       box.addEventListener("click", () => {
-        boxes.forEach(b => b.classList.remove("active"));
-        box.classList.add("active");
-
         const moduleNum = box.getAttribute("data-module");
         moduleTitle.textContent = `Module ${moduleNum}`;
         moduleDesc.textContent = descriptions[moduleNum];
@@ -199,6 +223,7 @@
     });
   </script>
 </section>
+
 
 </body>
 </html>
