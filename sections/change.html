@@ -1,0 +1,74 @@
+<script>
+  const changeBoxes = document.querySelectorAll(".change-box");
+  const changeTitleEl = document.getElementById("contentTitle");
+  const changeTextEl = document.getElementById("contentText");
+
+  const changeContentData = {
+    watch: "something beautiful is on the way. stay connected. something beautiful is on the way. stay connected.",
+    read: "open your mind to sacred wisdom. reflect deeply, read slowly, and let each word transform your awareness.",
+    practice: "turn insight into action. embody the lessons. practice devotion, presence, and kindness.",
+    internalize: "make the sacred your second nature. let the truth sink in until it lives in your every breath."
+  };
+
+  changeBoxes.forEach((box) => {
+    box.addEventListener("click", () => {
+      changeBoxes.forEach((b) => b.classList.remove("active"));
+      box.classList.add("active");
+
+      const topic = box.dataset.topic;
+      changeTitleEl.textContent = `${topic} ↑`;
+      changeTextEl.textContent = changeContentData[topic];
+    });
+  });
+</script>
+
+</section>
+
+<section class="change-section">
+  <h1 class="change-title">
+    change your <span class="italic">vision,</span><br>
+    better your <span class="italic">life</span>
+  </h1>
+
+  <div class="change-grid">
+    <div class="change-box active" data-topic="watch">watch ↓</div>
+    <div class="change-box" data-topic="read">read ↓</div>
+    <div class="change-box" data-topic="practice">practice ↓</div>
+    <div class="change-box" data-topic="internalize">internalize ↓</div>
+  </div>
+
+  <div class="change-content" id="changeContent">
+    <div class="content-left">
+      <h2 id="contentTitle">watch ↑</h2>
+      <p id="contentText">
+        something beautiful is on the way. stay connected. something beautiful
+        is on the way. stay connected. something beautiful is on the way. stay connected.
+      </p>
+    </div>
+    <div class="content-right"></div>
+  </div>
+</section>
+
+<script>
+  const boxes = document.querySelectorAll(".change-box");
+  const titleEl = document.getElementById("contentTitle");
+  const textEl = document.getElementById("contentText");
+
+  const content = {
+    watch: "something beautiful is on the way. stay connected. something beautiful is on the way. stay connected.",
+    read: "open your mind to sacred wisdom. reflect deeply, read slowly, and let each word transform your awareness.",
+    practice: "turn insight into action. embody the lessons. practice devotion, presence, and kindness.",
+    internalize: "make the sacred your second nature. let the truth sink in until it lives in your every breath."
+  };
+
+  boxes.forEach((box) => {
+    box.addEventListener("click", () => {
+      boxes.forEach((b) => b.classList.remove("active"));
+      box.classList.add("active");
+
+      const topic = box.dataset.topic;
+      titleEl.textContent = `${topic} ↑`;
+      textEl.textContent = content[topic];
+    });
+  });
+</script>
