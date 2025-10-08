@@ -448,6 +448,121 @@ body {
     transform: translateY(0);
   }
 }
+/* ===============================
+   CHANGE SECTION
+/* Change styling */
+.change-section {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #fff7f7;
+  padding: 6rem 2rem;
+}
+
+/* ===== Title ===== */
+.change-title {
+  color: #4B4E53;
+  text-align: center;
+  font-family: "DM Sans", sans-serif;
+  font-size: 110px;
+  font-weight: 300;
+  line-height: 100px;
+  letter-spacing: -3px;
+  margin-bottom: 3rem;
+  font-style: normal; /* ensure base title isn't italic */
+}
+
+.change-title .italic {
+  color: #E10606;
+  font-family: "Source Serif Pro", serif;
+  font-size: 110px;
+  font-style: italic;
+  font-weight: 600;
+}
+
+/* ===== Boxes ===== */
+.change-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 604px);
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.change-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 604px;
+  height: 90px;
+  border-radius: 5px;
+  background: #fff;
+  color: #D21117;
+  font-family: "DM Sans", sans-serif; /* changed to sans-serif for cleaner look */
+  font-size: 48px;
+  font-weight: 400;
+  line-height: 50px;
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-style: normal; /* ensure not italic */
+}
+
+.change-box.active {
+  background: #D21117;
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+/* ===== Big content box ===== */
+.change-content {
+  width: 1227px;
+  height: 369px;
+  display: flex;
+  border-radius: 5px;
+  background: linear-gradient(
+    102deg,
+    #FBFAFA -0.22%,
+    #F7F8FA 71.69%,
+    rgba(210, 17, 23, 0.2) 97.97%,
+    rgba(225, 6, 6, 0.2) 103.64%
+  );
+  box-shadow: 0 9px 15px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+}
+
+.content-left {
+  flex: 1;
+  padding: 3rem 4rem;
+  text-align: left;
+}
+
+.content-right {
+  flex: 1;
+  background: #C2DFFE;
+}
+
+/* ===== Inside content box ===== */
+#contentTitle {
+  color: #D21117;
+  font-family: "DM Sans", sans-serif; /* changed to match rest */
+  font-size: 96px;
+  font-weight: 400;
+  line-height: 1;
+  margin-bottom: 1.5rem;
+  font-style: normal; /* ensure not italic */
+}
+
+#contentText {
+  color: #4B4E53;
+  font-family: "DM Sans", sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 1.4;
+  width: 90%;
+  font-style: normal; /* ensure not italic */
+}
 
 
 
