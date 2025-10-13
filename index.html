@@ -274,8 +274,215 @@
   </div>
 </section>
 
+<!--Modules opening boxes-->
+<script>
+  // Select all the necessary elements from the page
+  const moduleBoxes = document.querySelectorAll(".module-box");
+  const modal = document.getElementById("moduleModal");
+  const modalTitle = document.getElementById("moduleTitle");
+  const modalDescription = document.getElementById("moduleDescription");
+  const closeModalBtn = document.getElementById("closeModal");
+
+  // Create an object to hold the content for each module
+  const moduleContent = {
+    1: { title: "Module 1: Under Construction", description: "Something beautiful is on the way. Stay connected." },
+    2: { title: "Module 2: Construction", description: "Something beautiful is on the way. Stay connected." },
+    3: { title: "Module 3: Construction", description: "Something beautiful is on the way. Stay connected." },
+    4: { title: "Module 4: Construction", description: "Something beautiful is on the way. Stay connected." },
+    5: { title: "Module 5: Construction", description: "Something beautiful is on the way. Stay connected" },
+    6: { title: "Module 6: Construction", description: "Something beautiful is on the way. Stay connected" },
+    7: { title: "Module 7: Construction", description: "Something beautiful is on the way. Stay connected" },
+    8: { title: "Module 8: Construction", description: "Something beautiful is on the way. Stay connected" },
+    9: { title: "Module 9: Construction", description: "Something beautiful is on the way. Stay connected" },
+    10: { title: "Module 10: Construction", description: "Something beautiful is on the way. Stay connected" }
+  };
+
+  // Add a click event listener to each module box
+  moduleBoxes.forEach(box => {
+    box.addEventListener("click", () => {
+      // Get the module number from the box's 'data-module' attribute
+      const moduleNumber = box.dataset.module;
+      
+      // Get the content for that module
+      const content = moduleContent[moduleNumber];
+      
+      // Update the modal's title and description
+      modalTitle.textContent = content.title;
+      modalDescription.textContent = content.description;
+      
+      // Show the modal
+      modal.style.display = "flex";
+    });
+  });
+
+  // Function to close the modal
+  const closeModal = () => {
+    modal.style.display = "none";
+  };
+
+  // Add a click listener to the close button
+  closeModalBtn.addEventListener("click", closeModal);
+
+  // Add a click listener to the background to close the modal
+  window.addEventListener("click", (event) => {
+    if (event.target === modal) {
+      closeModal();
+    }
+  });
+</script>
+
+<!--why did we create this section-->
+<section class="create-section">
+  <h1 class="create-title">why did we create this?</h1>
+
+  <div class="create-box">
+    <h2 class="create-subtitle">statement about bad relations</h2>
+    <p class="create-content">
+      something beautiful is on the way. stay connected. something beautiful is on the way.
+      stay connected. something beautiful is on the way. stay connected. something beautiful
+      is on the way. stay connected. something beautiful is on the way. stay connected.
+    </p>
+  </div>
+</section>
+
+
+<!--open a new chapter section-->
+<section class="chapter-section">
+  <div class="chapter-left">
+    <h1 class="chapter-title">
+      open a new<br>chapter and<br>get started
+    </h1>
+
+    <div class="chapter-line"></div>
+
+    <p class="chapter-content">
+      something beautiful is on the way. stay connected. something beautiful is on the way.
+      stay connected. something beautiful is on the way. stay connected. something beautiful
+      is on the way. stay connected.
+    </p>
+  </div>
+
+  <div class="chapter-right">
+    <img src="images/vivekji.JPG" alt="Book Mockup" class="chapter-image">
+  </div>
+</section>
+
+
+
+<!-- FAQ Section -->
+<section class="faq-section">
+  <div class="faq-title-container">
+    <h2 class="faq-title">some<br>questions<br>you might<br>have</h2>
+  </div>
+
+  <div class="faq-list">
+    <div class="faq-item">
+      <button class="faq-question">
+        <span>What is the core philosophy of this program?</span>
+        <span class="faq-toggle">+</span>
+      </button>
+      <div class="faq-answer">
+        <p>
+          Something beautiful is on the way. stay connected. something beautiful is on the way. stay connected. something beautiful is on the way. stay connected.
+        </p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">
+        <span>Under Construction: Stay Tuned</span>
+        <span class="faq-toggle">+</span>
+      </button>
+      <div class="faq-answer">
+        <p>
+          Something beautiful is on the way. stay connected. something beautiful is on the way. stay connected. something beautiful is on the way. stay connected.
+        </p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">
+        <span>Under Construction: Stay Tuned</span>
+        <span class="faq-toggle">+</span>
+      </button>
+      <div class="faq-answer">
+        <p>
+          Something beautiful is on the way. stay connected. something beautiful is on the way. stay connected. something beautiful is on the way. stay connected.
+        </p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">
+        <span>Under Construction: Stay Tuned</span>
+        <span class="faq-toggle">+</span>
+      </button>
+      <div class="faq-answer">
+        <p>
+Something beautiful is on the way. stay connected. something beautiful is on the way. stay connected. something beautiful is on the way. stay connected.        </p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">
+        <span>Under Construction: Stay Tuned</span>
+        <span class="faq-toggle">+</span>
+      </button>
+      <div class="faq-answer">
+        <p>
+Something beautiful is on the way. stay connected. something beautiful is on the way. stay connected. something beautiful is on the way. stay connected.        </p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">
+        <span>Under Construction: Stay Tuned</span>
+        <span class="faq-toggle">+</span>
+      </button>
+      <div class="faq-answer">
+        <p>
+Something beautiful is on the way. stay connected. something beautiful is on the way. stay connected. something beautiful is on the way. stay connected.        </p>
+      </div>
+    </div>
+    
+    </div>
+</section>
+<script>
+  // Select all the FAQ question buttons
+  const faqQuestions = document.querySelectorAll(".faq-question");
+
+  // Add a click event listener to each question
+  faqQuestions.forEach(button => {
+    button.addEventListener("click", () => {
+      // Find the parent .faq-item of the clicked button
+      const faqItem = button.parentElement;
+      
+      // Toggle the 'active' class on the parent item
+      faqItem.classList.toggle("active");
+    });
+  });
+</script>
+
+<!--missout section-->
+<section class="missout-section">
+  <h2 class="missout-title">
+    Don't miss out on the marriage of a lifetime.
+  </h2>
+  <p class="missout-subtitle">
+    Join over 100 couples who have completed this transformative experience and rediscovered their sacred union.
+  </p>
+  <a href="#" class="missout-btn">
+    Download the experience now
+  </a>
+</section>
+
 
 
 
 </body>
 </html>
+
+
+
+
+
