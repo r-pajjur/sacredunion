@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  background: linear-gradient(180deg, #FBFAFA 0%, #F7F8FA 60%, #BDE0FF 100%);
+  /* background: linear-gradient(180deg, #FBFAFA 0%, #F7F8FA 60%, #BDE0FF 100%); gradient background */
   color: #333;
   font-family: "DM Sans", sans-serif;
   overflow-x: hidden;
@@ -1025,5 +1025,125 @@ body {
   transform: scale(1.05);
   opacity: 0.9;
 }
+/* ===============================
+   DONATION / SOCIAL PROOF SECTION
+================================*/
+.donation-social-proof-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #7BC3FF; 
+  min-height: 500px;
+  padding: 8rem 0 0 0;
+  overflow: visible; 
+  position: relative;
+  /* Increased margin-bottom to move the next section down further */
+  margin-bottom: 200px; 
+}
 
+/* --- Content (Title & Subtitle) --- */
+.donation-content-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
 
+.donation-title {
+  width: 1071px;
+  height: 224px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  
+  color: #FFF;
+  font-family: "Source Serif Pro", serif;
+  font-size: 96px;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 80px; 
+  letter-spacing: -3px;
+  margin: -30px 0 0 0;
+}
+
+.donation-subtitle {
+  width: 1071px;
+  height: 131px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  
+  color: #FFF;
+  text-align: center;
+  font-family: Inter, sans-serif;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 35px; 
+  letter-spacing: 0.25px;
+  margin: 1rem 0 0 0;
+  
+}
+
+.donation-subtitle strong {
+  font-weight: 600; 
+}
+
+/* --- Polaroid Grid --- */
+.polaroid-grid {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 15px; 
+  position: absolute; 
+  width: 100%;
+  z-index: 10;
+  /* Positions the bottom of the grid at the bottom edge of the blue section */
+  bottom: 0; 
+  /* Pushes the grid down by 200px to create more space below the subtitle */
+  transform: translateY(200px); 
+}
+
+.polaroid-card {
+  width: 285.652px; 
+  height: 338.432px; 
+  background: #FFF;
+  box-shadow: 0 10px 30px 0 rgba(0, 0, 0, 0.25);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; 
+  padding-top: 20px; 
+  box-sizing: border-box;
+  flex-shrink: 0;
+}
+
+.polaroid-frame {
+  width: 240.208px;
+  height: 297.31px;
+  overflow: hidden; 
+  position: relative; 
+}
+
+.polaroid-img {
+  width: 100%;
+  height: 121.27%; 
+  object-fit: cover;
+  transform: translateY(-0.052px); 
+}
+
+/* --- Card Rotations --- */
+.polaroid-card.one,
+.polaroid-card.three,
+.polaroid-card.five {
+  transform: rotate(-2.486deg);
+}
+.polaroid-card.two,
+.polaroid-card.four {
+  transform: rotate(8.321deg);
+}
+
+/* Highlighted card with the blue border from the image */
+.polaroid-card.highlighted {
+  border: 7px solid #C2DFFE;
+  margin-top: -7px;
+}
