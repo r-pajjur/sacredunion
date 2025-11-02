@@ -37,7 +37,7 @@ body {
   text-transform: lowercase;
   border: none;
   cursor: pointer;
-  transform: translateX(-25px)
+  transform: translateX(-5px)
 }
 
 /* Hero Section */
