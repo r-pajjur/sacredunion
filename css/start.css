@@ -1,173 +1,6 @@
-/* ===============================
-  STYLES FOR START HERO
-  ===============================
-*/
-body {
-  margin: 0;
-  font-family: "DM Sans", sans-serif;
-  /* The background from accordion.css will override this,
-    which is what we want so the whole page has the gradient.
-  */
-  background: #f0f0f0; 
+html {
+  font-size: 45%; /* 1rem = 10px */
 }
-
-.start-hero {
-  width: 100%;
-  /* max-width: 1440px; As specified */
-  height: 633px;     /* As specified */
-  background: #D21117;
-  flex-shrink: 0;
-  margin: 0 auto; /* Center the hero if screen is wider */
-  position: relative;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-}
-
-/* --- Navbar --- */
-.start-nav {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  padding: 2rem 4rem;
-  gap: 1.5rem;
-}
-
-.home-link {
-  color: #FFF;
-  text-align: center;
-  font-family: "DM Sans";
-  font-size: 24px;
-  font-style: normal;
-  font-weight: 300;
-  text-decoration: none;
-  line-height: 1; /* Adjusted from 100px */
-}
-
-.login-btn {
-  width: 141px;
-  height: 49px;
-  flex-shrink: 0;
-  border-radius: 6px; /* Added for softer corners */
-  background: #B9DFFF;
-  
-  /* Flex to center text */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  color: #353635;
-  text-align: center;
-  font-family: "DM Sans";
-  font-size: 24px;
-  font-style: normal;
-  font-weight: 300;
-  line-height: 1; /* Adjusted from 100px */
-  text-decoration: none;
-}
-
-/* --- Hero Content --- */
-.start-content {
-  padding-left: 6rem;
-  margin-top: 2rem;
-  z-index: 10;
-}
-
-.start-content h1 {
-  /* Using 1277px width for flex-basis */
-  max-width: 1277px; 
-  color: #FFF;
-  font-family: "DM Sans";
-  font-size: 128px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 100px; /* 78.125% - This is correct based on your spec */
-  letter-spacing: -3px;
-  margin: 0 0 1rem 0;
-
-  opacity: 0; /* Set to 0 to start invisible */
-  animation: fadeInSlideUp 1.5s ease forwards; /* Apply the animation */
-  
-}
-
-.start-content p {
-  max-width: 563px;
-  color: #FFF;
-  font-family: "Source Serif Pro";
-  font-size: 48px;
-  font-style: italic;
-  font-weight: 400;
-  line-height: 50px; /* 104.167% */
-  margin: 0;
-}
-
-/* --- Decorative Elements --- */
-.bottom-bar {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 50%;
-  height: 80px; /* Guessed from screenshot */
-  background: #E0E0E0; /* Guessed from screenshot */
-  border-radius: 0 40px 0 0;
-  z-index: 5;
-}
-
-/* .circle-deco {
-  position: absolute;
-  right: -50px;
-  top: 100px;
-  width: 300px;
-  height: 300px;
-}
-
-.blue-circle {
-  position: absolute;
-  width: 120px;
-  height: 120px;
-  background: #B9DFFF;
-  border-radius: 50%;
-  right: 50px;
-  top: 120px;
-  z-index: 2;
-}
-
-.circle-deco .line {
-  position: absolute;
-  width: 200px;
-  height: 400px;
-  border: 3px solid rgba(255, 255, 255, 0.5);
-  border-radius: 50%;
-  right: 0;
-  top: 0;
-  z-index: 1;
-}
-
-/* Spreading out the decorative lines */
-/* .line-1 { transform: scale(1.0); opacity: 0.1; }
-.line-2 { transform: scale(1.1); opacity: 0.2; }
-.line-3 { transform: scale(1.2); opacity: 0.3; }
-.line-4 { transform: scale(1.3); opacity: 0.4; }
-.line-5 { transform: scale(1.4); opacity: 0.5; }
-.line-6 { transform: scale(1.5); opacity: 0.6; }
-.line-7 { transform: scale(1.6); opacity: 0.7; } */ 
-
-@keyframes fadeInSlideUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-
-/* ===============================
-  STYLES FOR ACCORDION (from accordion.css)
-  ===============================
-*/
 
 /* --- Base and Container --- */
 body {
@@ -178,196 +11,262 @@ body {
   background-attachment: fixed;
 }
 
+/* ===============================
+  STYLES FOR START HERO
+  ===============================
+*/
+.start-hero {
+  width: 100%;
+  height: 63.3rem; /* 633px */
+  background: #D21117;
+  flex-shrink: 0;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+.start-nav {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 2rem 4rem;
+  gap: 1.5rem;
+}
+.home-link {
+  color: #FFF;
+  text-align: center;
+  font-family: "DM Sans";
+  font-size: 2.4rem; /* 24px */
+  font-weight: 300;
+  text-decoration: none;
+  line-height: 1;
+}
+.login-btn {
+  width: 14.1rem; /* 141px */
+  height: 4.9rem; /* 49px */
+  flex-shrink: 0;
+  border-radius: 0.6rem; /* 6px */
+  background: #B9DFFF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #353635;
+  text-align: center;
+  font-family: "DM Sans";
+  font-size: 2.4rem; /* 24px */
+  font-weight: 300;
+  line-height: 1;
+  text-decoration: none;
+}
+.start-content {
+  padding-left: 6rem;
+  margin-top: 2rem;
+  z-index: 10;
+}
+.start-content h1 {
+  max-width: 127.7rem; /* 1277px */
+  color: #FFF;
+  font-family: "DM Sans";
+  font-size: 12.8rem; /* 128px */
+  font-weight: 400;
+  line-height: 10rem; /* 100px */
+  letter-spacing: -0.3rem; /* -3px */
+  margin: 0 0 1rem 0;
+  opacity: 0;
+  animation: fadeInSlideUp 1.5s ease forwards;
+}
+.start-content p {
+  max-width: 56.3rem; /* 563px */
+  color: #FFF;
+  font-family: "Source Serif Pro";
+  font-size: 4.8rem; /* 48px */
+  font-style: italic;
+  font-weight: 400;
+  line-height: 5rem; /* 50px */
+  margin: 10;
+}
+.bottom-bar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50%;
+  height: 8rem; /* 80px */
+  background: #E0E0E0;
+  border-radius: 0 4rem 0 0; /* 40px */
+  z-index: 5;
+}
+@keyframes fadeInSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(2rem); /* 20px */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===============================
+  STYLES FOR ACCORDION
+  ===============================
+*/
 .module-container {
   width: 100%;
-  max-width: 1443px; /* Max width */
-  min-height: 1460px; /* Min height */
-  margin: 0 auto; /* Center the container */
-  /* Added margin-top to separate it from the hero */
-  margin-top: 50px; 
+  max-width: 144.3rem; /* 1443px */
+  min-height: 146rem; /* 1460px */
+  margin: 0 auto;
+  margin-top: 5rem; /* 50px */
   padding: 4rem 2rem;
   box-sizing: border-box;
-
-  /* Layout for the modules */
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 25px;
+  gap: 2.5rem; /* 25px */
 }
-
-/* --- General Module Item Styling --- */
 .module-item {
   width: 100%;
-  max-width: 1205px; /* Max width */
+  max-width: 120.5rem; /* 1205px */
   flex-shrink: 0;
-  border-radius: 10px;
+  border-radius: 1rem; /* 10px */
   background: #FFF;
-  box-shadow: 0 10px 10px 5px rgba(221, 206, 206, 0.50);
-  overflow: hidden; /* Crucial for animation */
+  box-shadow: 0 1rem 1rem 0.5rem rgba(221, 206, 206, 0.50);
+  overflow: hidden;
   position: relative;
-  transition: max-height 0.4s ease; /* Made this a bit faster */
+  transition: max-height 0.4s ease;
 }
-
-/* --- Closed State --- */
 .module-item.closed {
-  max-height: 114px; /* Fixed height when closed */
+  max-height: 11.4rem; /* 114px */
 }
-
 .module-item.closed .module-content {
-  display: none; /* Hide content when closed */
+  display: none;
 }
-
 .module-item.closed .module-header {
   cursor: pointer;
 }
-
-/* --- Open State --- */
 .module-item.open {
-  max-height: 472px; /* Fixed height when open */
+  max-height: 47.2rem; /* 472px */
 }
-
 .module-item.open .module-header {
-  /* Hide the simple header when open */
-  display: none; 
+  display: none;
 }
-
 .module-item.open .module-content {
-  display: block; /* Show full content */
+  display: block;
   padding: 3rem 4rem;
   box-sizing: border-box;
-  animation: fadeInContent 1s ease; /* ADD THIS LINE */
+  animation: fadeInContent 1s ease;
 }
-
-/* --- Module Header (for closed items) --- */
 .module-header {
   display: flex;
   align-items: center;
   gap: 2rem;
   padding: 0 4rem;
-  height: 114px;
-  animation: fadeInContent 0.5s ease; /* ADD THIS LINE */
+  height: 11.4rem; /* 114px */
+  animation: fadeInContent 0.5s ease;
 }
-
 .module-tag {
   display: flex;
-  width: 141px;
-  height: 48px;
+  width: 14.1rem; /* 141px */
+  height: 4.8rem; /* 48px */
   flex-direction: column;
   justify-content: center;
   align-items: center;
   flex-shrink: 0;
-  border-radius: 24px; /* Make it a pill */
-
+  border-radius: 2.4rem; /* 24px */
   color: #FFF;
   text-align: center;
   font-family: "DM Sans";
-  font-size: 24px;
+  font-size: 2.4rem; /* 24px */
   font-weight: 300;
-  line-height: 1; /* Adjusted */
+  line-height: 1;
 }
-
 .module-tag.blue {
-  background: #B9DFFF; /* Blue from previous screenshot */
-  color: #353635; /* Dark text on light blue */
+  background: #B9DFFF;
+  color: #353635;
 }
 .module-item.closed .module-tag.blue {
   background: #B9DFFF;
-  color: #353635
-}
-
-/* For workshop 1 tag inside open module */
-.module-content .module-tag.blue {
-  background: #B9DFFF; 
   color: #353635;
 }
-
-
+.module-content .module-tag.blue {
+  background: #B9DFFF;
+  color: #353635;
+}
 .module-tag.grey {
-  background: #BDBDBD; /* A neutral grey */
+  background: #BDBDBD;
   color: #FFF;
 }
-
 .module-title-closed {
   color: #D21117;
   font-family: "Source Serif Pro";
-  font-size: 40px;
+  font-size: 4rem; /* 40px */
   font-style: italic;
   font-weight: 400;
-  line-height: 1.2; /* Adjusted */
-  letter-spacing: -3px;
+  line-height: 1.2;
+  letter-spacing: -0.3rem; /* -3px */
   margin: 0;
 }
-
-/* --- Module Content (for open item) --- */
 .module-title-open {
   color: #D21117;
   font-family: "Source Serif Pro";
-  font-size: 96px;
+  font-size: 9.6rem; /* 96px */
   font-style: italic;
   font-weight: 400;
-  line-height: 80px; /* As specified */
-  letter-spacing: -3px;
+  line-height: 8rem; /* 80px */
+  letter-spacing: -0.3rem; /* -3px */
   margin: 1rem 0 1.5rem 0;
 }
-
 .module-subtitle {
   color: #4B4E53;
   font-family: Inter, sans-serif;
-  font-size: 28px;
+  font-size: 2.8rem; /* 28px */
   font-weight: 400;
-  line-height: 1.3; /* Adjusted */
-  letter-spacing: 0.25px;
-  max-width: 811px;
+  line-height: 1.3;
+  letter-spacing: 0.025rem; /* 0.25px */
+  max-width: 81.1rem; /* 811px */
   margin-bottom: 2rem;
 }
-
 .start-button {
   display: inline-flex;
-  width: 199px;
-  height: 69px;
+  width: 19.9rem; /* 199px */
+  height: 6.9rem; /* 69px */
   justify-content: center;
   align-items: center;
   flex-shrink: 0;
   background: #D21117;
-  border-radius: 8px;
-
+  border-radius: 0.8rem; /* 8px */
   color: #FFF;
   text-align: center;
   font-family: Inter, sans-serif;
-  font-size: 28px;
+  font-size: 2.8rem; /* 28px */
   font-weight: 400;
-  line-height: 1; /* Adjusted */
-  letter-spacing: 0.25px;
+  line-height: 1;
+  letter-spacing: 0.025rem; /* 0.25px */
   text-decoration: none;
   transition: background 0.3s;
 }
-
 .start-button:hover {
   background: #a10e13;
 }
-
-/* --- Decorative Elements (for open module) --- */
 .deco-line {
   position: absolute;
-  right: 120px;
+  right: 12rem; /* 120px */
   top: 0;
   height: 100%;
   width: 2px;
   background: #D21117;
   opacity: 0.3;
 }
-
 .deco-circle-container {
   position: absolute;
-  right: 70px;
-  top: 60px;
-  width: 100px;
-  height: 100px;
+  right: 7rem; /* 70px */
+  top: 6rem; /* 60px */
+  width: 10rem; /* 100px */
+  height: 10rem; /* 100px */
 }
-
 .deco-circle {
-  width: 90px;
-  height: 90px;
+  width: 9rem; /* 90px */
+  height: 9rem; /* 90px */
   border: 2px solid #D21117;
   border-radius: 50%;
   position: relative;
@@ -375,27 +274,23 @@ body {
   justify-content: center;
   align-items: center;
 }
-
 .deco-clover {
   width: 60%;
   height: 60%;
   position: relative;
   transform: rotate(45deg);
 }
-
 .petal {
   position: absolute;
   width: 50%;
   height: 50%;
-  background: #C2DFFE; /* Light blue */
+  background: #C2DFFE;
   border-radius: 50%;
 }
 .petal.top-left { top: 0; left: 0; }
 .petal.top-right { top: 0; right: 0; }
 .petal.bottom-left { bottom: 0; left: 0; }
 .petal.bottom-right { bottom: 0; right: 0; }
-
-/* --- Animation for Smooth Fade --- */
 @keyframes fadeInContent {
   from {
     opacity: 0;
@@ -406,19 +301,14 @@ body {
 }
 
 /* ===============================
-  STYLES FOR DONATION MODAL
+  STYLES FOR MODALS
   ===============================
 */
-
-/* --- The Blur Effect --- */
 #main-content.blurred {
-  filter: blur(8px);
+  filter: blur(0.8rem); /* 8px */
   transition: filter 0.3s ease-out;
-  /* This prevents the user from clicking on blurred items */
-  pointer-events: none; 
+  pointer-events: none;
 }
-
-/* --- The Overlay (Background) --- */
 .modal-overlay {
   position: fixed;
   top: 0;
@@ -427,214 +317,167 @@ body {
   height: 100%;
   background: rgba(0, 0, 0, 0.6);
   z-index: 1000;
-
-  /* For centering the modal */
   display: flex;
   justify-content: center;
   align-items: center;
-
-  /* Hidden by default */
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.3s ease-out;
 }
-
-/* Active state for the overlay */
 .modal-overlay.active {
   opacity: 1;
   pointer-events: all;
 }
-
-/* --- The Modal (Red Box) --- */
 .modal-content {
-  width: 1000px;
-  height: 500px;
+  width: 100rem; /* 1000px */
+  height: 50rem; /* 500px */
   flex-shrink: 0;
-  border-radius: 10px;
+  border-radius: 1rem; /* 10px */
   background: #D21117;
-  box-shadow: 0 10px 10px 5px rgba(221, 206, 206, 0.50);
-
-  /* For centering content */
+  box-shadow: 0 1rem 1rem 0.5rem rgba(221, 206, 206, 0.50);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 20px; /* Space between items */
-  
-  position: relative; /* For the close button */
+  gap: 2rem; /* 20px */
+  position: relative;
   padding: 2rem;
   box-sizing: border-box;
-
-  /* Animation */
   transform: scale(0.95);
   transition: transform 0.3s ease-out;
 }
-
 .modal-overlay.active .modal-content {
   transform: scale(1);
 }
-
-
-/* --- Modal Content --- */
 .modal-text-1 {
-  max-width: 1031px;
+  max-width: 103.1rem; /* 1031px */
   color: #FFF;
   text-align: center;
   font-family: "DM Sans";
-  font-size: 25px;
-  font-style: normal;
+  font-size: 2.5rem; /* 25px */
   font-weight: 300;
-  line-height: 1.3; /* Adjusted from 36px */
+  line-height: 1.3;
   margin: 0;
 }
-
 .modal-text-2 {
-  max-width: 1031px;
+  max-width: 103.1rem; /* 1031px */
   color: #FFF;
   text-align: center;
   font-family: "DM Sans";
-  font-size: 25px;
-  font-style: normal;
+  font-size: 2.5rem; /* 25px */
   font-weight: 700;
-  line-height: 1.3; /* Adjusted from 36px */
+  line-height: 1.3;
   margin: 0;
 }
-
-/* --- Modal Donate Button --- */
 .modal-donate-btn {
-  width: 454px;
-  height: 69px;
+  width: 45.4rem; /* 454px */
+  height: 6.9rem; /* 69px */
   flex-shrink: 0;
   background: #FFF;
-  border-radius: 8px; /* Added for style */
-
-  /* Centering text */
+  border-radius: 0.8rem; /* 8px */
   display: flex;
   justify-content: center;
   align-items: center;
-
   color: #D21117;
   text-align: center;
   font-family: Inter, sans-serif;
-  font-size: 28px;
+  font-size: 2.8rem; /* 28px */
   font-weight: 400;
   line-height: 1;
-  letter-spacing: 0.25px;
+  letter-spacing: 0.025rem; /* 0.25px */
   text-decoration: none;
   transition: transform 0.2s ease;
 }
-
 .modal-donate-btn:hover {
   transform: scale(1.05);
 }
-
-/* --- Modal Footer Text --- */
 .modal-footer {
-  max-width: 971px;
+  max-width: 97.1rem; /* 971px */
   color: #FFF;
   text-align: center;
   font-family: "Source Serif Pro";
-  font-size: 32px;
+  font-size: 3.2rem; /* 32px */
   font-style: italic;
   font-weight: 600;
-  line-height: 36px;
+  line-height: 3.6rem; /* 36px */
   margin: 0;
-  margin-top: 20px; /* Add some space */
+  margin-top: 2rem; /* 20px */
 }
-
-/* --- Modal Close Button (X) --- */
 .close-modal {
   position: absolute;
-  top: 15px;
-  right: 25px;
+  top: 1.5rem; /* 15px */
+  right: 2.5rem; /* 25px */
   background: none;
   border: none;
   color: white;
-  font-size: 48px;
+  font-size: 4.8rem; /* 48px */
   font-weight: bold;
   cursor: pointer;
   line-height: 1;
   padding: 0;
 }
 
-/* ===============================
-  STYLES FOR LOGIN MODAL
-  ===============================
-*/
-
-/* Override default modal for the login box */
+/* Login Modal */
 .login-modal-box {
   background: #FFFFFF;
-  width: 450px;
-  height: auto; /* Auto-height based on content */
-  gap: 15px;
+  width: 45rem; /* 450px */
+  height: auto;
+  gap: 1.5rem; /* 15px */
   padding: 2.5rem;
 }
-
 .login-modal-box h2 {
   color: #D21117;
   font-family: "Source Serif Pro", serif;
-  font-size: 48px;
+  font-size: 4.8rem; /* 48px */
   font-style: italic;
   margin: 0 0 1rem 0;
   text-align: center;
 }
-
 .login-modal-box .close-modal {
-  color: #333; /* Dark X for a white box */
-  top: 10px;
-  right: 20px;
+  color: #333;
+  top: 1rem; /* 10px */
+  right: 2rem; /* 20px */
 }
-
-/* --- Login Form --- */
 #login-form {
   display: flex;
   flex-direction: column;
   width: 100%;
-  gap: 20px;
+  gap: 2rem; /* 20px */
 }
-
 .form-group {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 0.8rem; /* 8px */
 }
-
 .form-group label {
   color: #4B4E53;
   font-family: "DM Sans", sans-serif;
-  font-size: 18px;
+  font-size: 1.8rem; /* 18px */
   font-weight: 500;
 }
-
 .form-group input {
   width: 100%;
-  padding: 12px;
+  padding: 1.2rem; /* 12px */
   border: 1px solid #BDBDBD;
-  border-radius: 6px;
-  font-size: 16px;
-  box-sizing: border-box; /* Important */
+  border-radius: 0.6rem; /* 6px */
+  font-size: 1.6rem; /* 16px */
+  box-sizing: border-box;
 }
-
-/* Login button override (reusing class) */
 .login-modal-box .modal-donate-btn {
   background: #D21117;
   color: #FFF;
-  width: 100%; /* Make button full-width */
-  margin-top: 10px;
+  width: 100%;
+  margin-top: 1rem; /* 10px */
 }
-
 .login-modal-box .modal-donate-btn:hover {
   background: #a10e13;
   transform: scale(1.02);
 }
-
-/* Error Message */
 .login-error-message {
   color: #D21117;
   font-family: "DM Sans", sans-serif;
   font-weight: 500;
   text-align: center;
   margin: 0;
-  display: none; /* Hidden by default */
+  display: none;
 }
