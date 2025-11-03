@@ -279,10 +279,10 @@ body {
 }
 
 
-/* --- Utilities --- */
+/* --- icon --- */
 .deco-svg {
   position: absolute;
-  top: 20rem; /* 200px */
+  top: 8rem; /* 200px */
   right: 10rem; /* 100px */
   width: 14.7rem; /* 147px */
   height: 14.5rem; /* 145px */
