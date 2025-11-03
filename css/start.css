@@ -334,7 +334,7 @@ body {
   flex-shrink: 0;
   border-radius: 1rem; /* 10px */
   background: #D21117;
-  box-shadow: 0 1rem 1rem 0.5rem rgba(221, 206, 206, 0.50);
+  box-shadow: 0 0rem 6rem 0.5rem rgba(221, 206, 206, 0.50);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -480,4 +480,63 @@ body {
   text-align: center;
   margin: 0;
   display: none;
+}
+/* ===============================
+   FOOTER STYLES (New Layout)
+   ===============================
+*/
+.footer {
+  width: 100%;
+  height: 20rem; /* Auto height */
+  min-height: 0rem; /* 251px */
+  background: #7BC3FF;
+  display: flex;
+  justify-content: space-between; /* Pushes items to ends */
+  align-items: center;
+  padding: 4rem 6rem; /* Add padding */
+  box-sizing: border-box;
+  flex-shrink: 0;
+  margin-top: 5rem;
+  flex-wrap: wrap; /* Allows wrapping on small screens */
+  gap: 2rem; /* Adds space between items if they wrap */
+}
+
+/* Container for the text on the left */
+.footer-text-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.footer-text {
+  color: #FFF;
+  font-family: "Source Serif Pro", serif;
+  font-size: 3rem; /* 40px */
+  font-weight: 400;
+  line-height: 1.5; /* Adjusted */
+  letter-spacing: -0.2rem; /* -2px */
+  margin: 0;
+}
+
+.footer-text.italic {
+  font-style: italic;
+}
+
+/* Red box for the icon on the right */
+.footer-icon-box {
+  width: 10rem; /* 120px */
+  height: 10rem; /* 120px */
+  background: #D21117;
+  border-radius: 0.8rem; /* 8px */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  margin-left: auto; /* Pushes icon to the right */
+}
+
+.footer-icon {
+  width: 7.8rem; /* 77.938px */
+  height: 7.7rem; /* 76.589px */
+  flex-shrink: 0;
 }
