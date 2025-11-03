@@ -1,5 +1,5 @@
 html {
-  font-size: 45%; /* 1rem = 10px */
+  font-size: 60%; /* 1rem = 10px */
 }
 
 /* --- Base --- */
@@ -215,7 +215,9 @@ body {
 }
 /* Make video iframes responsive within the tab */
 .tab-pane iframe {
-  max-width: 100%;
+  width: 100%; /* Make the video fill the tab pane */
+  /* max-width: 90rem; Set a max width (e.g., 900px) */
+  aspect-ratio: 16 / 9; /* Automatically sets the height to a 16:9 ratio */
   border-radius: 1.2rem; /* 12px */
   border: 0;
 }
@@ -356,4 +358,42 @@ body {
   width: 7.8rem; /* 77.938px */
   height: 7.7rem; /* 76.589px */
   flex-shrink: 0;
+}
+
+/* --- Alternative: Resizing Box --- */
+
+/* Make the content window height automatic */
+/* Make the content window height automatic */
+.tab-content-window {
+  width: 100%;
+  max-width: 120.5rem;
+  height: auto; /* <-- CHANGED */
+  min-height: 47rem; /* Keeps other tabs looking right */
+  
+  /* --- CHANGED --- */
+  background: #FFFFFF; /* 1. Set background to white */
+  border: 3px solid #7BC3FF; /* 2. Add your blue border */
+  border-radius: 8px; /* 3. (Optional) Add rounded corners */
+  box-sizing: border-box; /* 4. (Important) Include border in the size */
+  
+  margin-top: 1px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  flex-grow: 1;
+}
+
+/* Make the image tab pane's height automatic */
+.tab-pane[data-tab-content="1"] {
+  padding: 0;
+  overflow: hidden;
+  min-height: 0; /* <-- ADDED */
+}
+
+/* Make the image fit its own width */
+.workbook-image {
+  width: 100%;
+  height: auto; /* <-- CHANGED */
+  display: block; /* Removes extra space below image */
 }
