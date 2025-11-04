@@ -27,12 +27,26 @@
   <!-- Hero Section -->
   <section class="hero">
     <h1>our sacred union</h1>
-    <p>Something beautiful is on the way</p>
+    <p>Bring meaning to your <br> marriage with Vedānta</p>
     <div class="search-box">
       <span id="typed-question"></span>
     </div>
     <div class="answer" id="answer"></div>
   </section>
+
+  <!-- <div class="flower-container">
+  <div class="center-dot"></div>
+  <div class="petal-segment"></div>
+  <div class="petal-segment"></div>
+  <div class="petal-segment"></div>
+  <div class="petal-segment"></div>
+  <div class="outer-circle"></div>
+  <div class="inner-circle"></div>
+</div> -->
+
+  
+
+  
 
   <!-- Sacred Opportunity Section -->
   <section class="section">
@@ -49,50 +63,52 @@
     <div class="right-box">
       <div class="tagline">a sacred opportunity</div>
       <h2 class="headline">deeper<br>than “I do”</h2>
+      
+      <div class="deeper-line"></div>
+      <div class="deeper-line2"></div>
       <p class="body-text">
         something beautiful is on the way. stay connected. something beautiful is on the way. stay connected. something beautiful is on the way. stay connected.
       </p>
-      <a href="start.html">
-      <button class="start-btn">start now</button>
-    </a>
+      <<a href="start.html" class="deeperStart-btn">dive deeper</a>
+      <div class="ancient-divider"></div>
     </div>
+
   </section>
   
 
   <!-- QA Script -->
-  <script>
-    const qaPairs = [
-      { q: "How to be happy?", a: "Spread happiness to be happy." },
-      { q: "How do I feel Bhagavan?", a: "Accept His presence and then feel His power." },
-      { q: "What is sacred union?", a: "The harmony of love, spirit, and truth." }
+<script>
+    // 1. Simplified the array to just be questions
+    const questions = [
+      "How to be happy?",
+      "How do I feel Bhagavan?",
+      "What is sacred union?"
     ];
 
     let currentIndex = 0;
-    const answerEl = document.getElementById("answer");
     const questionEl = document.getElementById("typed-question");
-
-    function showQA(index) {
-      const { q, a } = qaPairs[index];
+    
+    // 2. Renamed function for clarity
+    function showQuestion(index) {
+      const q = questions[index]; // Get the question
       questionEl.textContent = "";
-      answerEl.textContent = "";
-      answerEl.classList.remove("show");
 
       new Typed("#typed-question", {
         strings: [q],
         typeSpeed: 50,
         showCursor: false,
         onComplete: () => {
-          answerEl.textContent = a;
-          answerEl.classList.add("show");
+          // 3. Removed all answer logic
+          // Just wait 2.5 seconds, then show the next question
           setTimeout(() => {
-            currentIndex = (currentIndex + 1) % qaPairs.length;
-            showQA(currentIndex);
-          }, 2500);
+            currentIndex = (currentIndex + 1) % questions.length;
+            showQuestion(currentIndex);
+          }, 2500); 
         }
       });
     }
 
-    showQA(currentIndex);
+    showQuestion(currentIndex);
   </script>
 
   <!-- Ancient Section -->
@@ -118,8 +134,11 @@
 
             <!-- Divider + icon -->
             <div class="ancient-divider">
-              <div class="divider-line"></div>
-              <div class="divider-icon">
+  <div class="divider-line"></div>
+  <div class="divider-icon">
+    <img src="logos/redLineBlueDot2.svg" alt="Sacred Union Icon">
+  </div>
+</div>
                 
                 <!-- (SVG stays the same) -->
               </div>

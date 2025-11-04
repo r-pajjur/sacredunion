@@ -372,7 +372,7 @@ body {
   
   /* --- CHANGED --- */
   background: #FFFFFF; /* 1. Set background to white */
-  border: 3px solid #7BC3FF; /* 2. Add your blue border */
+  border: 10px solid #7BC3FF; /* 2. Add your blue border */
   border-radius: 8px; /* 3. (Optional) Add rounded corners */
   box-sizing: border-box; /* 4. (Important) Include border in the size */
   

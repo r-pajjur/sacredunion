@@ -7,9 +7,8 @@ body {
   color: #333;
   font-family: "DM Sans", sans-serif;
   overflow-x: hidden;
-  /* Add your landing page gradient back */
-  
 }
+
 
 /* Navbar */
 .navbar {
@@ -36,40 +35,54 @@ body {
 .navbar .start-btn {
   background: #B9DFFF;
   padding: 0.4rem 1.2rem;
-  border-radius: 0.6rem; /* 6px */
-  font-size: 1.7rem; /* 18px */
-  font-weight: 500;
+  font-size: 24px; /* 18px */
   text-transform: lowercase;
   border: none;
   cursor: pointer;
-  transform: translateX(-0.5rem); /* 5px */
+  transform: translateX(0rem); /* 5px */
 
   text-align: center;
   font-family: "DM Sans";
   justify-content: center;
   align-items: center;
 
-  width: 10.1rem; /* 141px */
-  height: 3.9rem; /* 49px */
+  width: 141px; /* 141px */
+  height: 49px; /* 49px */
   flex-shrink: 0;
-  border-radius: 0.6rem; /* 6px */
+  border-radius: 0.6rem; /* 6px curvature */
   display: flex;
-  font-weight: 300;
   line-height: 1;
   text-decoration: none;
+  transition: background 0.3s;
+}
+.start-btn:hover {
+  background: #8bc9fb;
 }
 
 /* Hero Section : title*/
+/* Hero Section : title*/
 .hero {
   min-height: 100vh;
-  padding-top: 10rem; /* 100px */
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: center;    /* This centers horizontally */
+  justify-content: center; /* <-- ADD THIS to center vertically */
   text-align: center;
-  transform: translateY(20rem);
-  /* background: linear-gradient(90deg, #FBFAFA 0%, #F7F8FA 60%, #BDE0FF 100%); */
+  
+  /* REMOVE padding-top, it's no longer needed */
+  /* padding-top: 10rem; */ 
+
+  /* REMOVE transform, this was causing the overlap */
+  /* transform: translateY(20rem); */
+  
+  /* Your background gradient */
+  background: var(--blue-gradient, linear-gradient(117deg, 
+    rgba(251, 250, 250, 0.00) 2.25%, 
+    rgba(247, 248, 250, 0.00) 71.54%, 
+    #A4DFFF 105.38%, #C8D8FF 112.82%));
 }
+
+/* Hero Section : main title text */
 .hero h1 {
   color: #D21117;
   font-family: "DM Sans", sans-serif;
@@ -83,13 +96,15 @@ body {
   letter-spacing: -3px;
   
 }
+/* Hero Section : subtitle text */
 .hero p {
   color: #D21117;
   font-family: "Source Serif Pro", serif;
-  font-size: 28px; /* 28px */
+  font-size: 48px; /* 28px */
   font-style: italic;
-  margin-top: 0.8rem;
-  margin-bottom: 2rem;
+  margin-top: -2rem;
+  margin-bottom: 4rem;
+  justify-content: center;
 }
 
 @keyframes fadeInUp {
@@ -121,16 +136,18 @@ height: 58px;
   margin-top: 1rem;
 }
 .answer.show {
-  opacity: 0;
+  opacity: 0; /*hidden right now*/
 }
 
-/* Scroll Section */
+/* deeper than i do */
+
+/*right side*/
 .section {
   display: flex;
   align-items: center;
   justify-content: center;
   /* min-height: 100vh; */
-  background: #fff;
+  /* background: #fff; */
 }
 .left-box {
   width: 50%;
@@ -140,6 +157,20 @@ height: 58px;
   align-items: center;
   justify-content: center;
 }
+.deeper-line2 {
+  width: 198px;
+  height: 1px; /* 561px */
+  background: #ffffff;
+  transform: translateY(-14.95rem) translateX(-30.5rem);
+}
+.deeper-line {
+  width: 800px;
+  height: 1px; /* 561px */
+  background: #E10606;
+  transform: translateY(-14.8rem) translateX(-3rem);
+}
+
+
 .circle-design {
   position: relative;
   width: 46rem; /* 460px */
@@ -184,22 +215,27 @@ height: 58px;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
+  box-sizing: border-box;
 }
+/* sacred opporutnity box */
 .tagline {
   width: 241px;
   height: 48px;
   background: #D21117;
   color: white;
   padding: 0.3rem 1rem;
-  font-size: 24px; /* 20px */
+  font-size: 20px; /* 20px */
   font-weight: 300;
   margin-bottom: 5rem;
   margin-left: 30px;
-  justify-content: center;
   
+  display: flex;
+  align-items: center;     /* This centers the text vertically */
+  justify-content: center; /* This will now center horizontally */
+  box-sizing: border-box;  /* This includes padding in the 241px width */
 }
 
-
+/* title */
 .headline {
   color: #D21117;
   height: 300px;
@@ -209,7 +245,10 @@ height: 58px;
   margin: 0 0 1.5rem 0;
   letter-spacing: -0.3rem; /* -2px */
     margin-left: 30px;
+  margin-bottom: 30px;
 }
+
+
 .body-text {
   color: #4B4E53;
   font-family: Inter, sans-serif;
@@ -220,6 +259,39 @@ height: 58px;
   margin-left: 30px;
 
 }
+
+.deeperStart-btn {
+  /* Layout & Box Model */
+  display: inline-flex;  /* Use inline-flex for a link */
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: 49px;
+  padding: 0.4rem 1.2rem;
+  margin-left: 30px;
+  box-sizing: border-box; /* Ensures padding doesn't break the width */
+  border-radius: 0.6rem;
+  border: none;
+  
+  /* Appearance & Font */
+  background: #B9DFFF;
+  color: #333; /* <-- Add a color for the text */
+  font-family: "DM Sans";
+  font-size: 24px;
+  line-height: 1;
+  text-decoration: none; /* <-- This now works on the <a> tag */
+
+  /* Behavior */
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.deeperStart-btn:hover {
+  background: #8bc9fb;
+}
+
+
+
 
 /* Ancient Section */
 .ancient {
@@ -1068,4 +1140,157 @@ height: 58px;
   width: 7.8rem; /* 77.938px */
   height: 7.7rem; /* 76.589px */
   flex-shrink: 0;
+}
+
+/* === FLOWER ANIMATION STYLES === */
+
+.flower-container {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 4rem; /* Added margin to space it from Q&A */
+    background-color: transparent; /* Set to transparent */
+}
+
+.center-dot {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background-color: red;
+    border-radius: 50%;
+    z-index: 2;
+}
+
+.petal-segment {
+    position: absolute;
+    width: 100px; /* Half of container width */
+    height: 100px; /* Half of container height */
+    background-color: transparent;
+    border: 5px solid black; /* Changed to black to show on light BG */
+    border-radius: 50%;
+    opacity: 0; /* Start hidden */
+    transform-origin: center;
+    animation: unwindWind 6s ease-in-out infinite; /* Total animation duration */
+    animation-fill-mode: forwards;
+}
+
+/* Positioning and rotation for each petal segment */
+.petal-segment:nth-child(1) {
+    top: 0;
+    left: 50px; /* Centered horizontally */
+    border-top-color: transparent;
+    border-right-color: transparent;
+    transform: rotate(0deg) scale(0);
+    animation-delay: 0s;
+}
+.petal-segment:nth-child(2) {
+    top: 50px; /* Centered vertically */
+    right: 0;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+    transform: rotate(90deg) scale(0);
+    animation-delay: 0.1s; /* Slight delay for staggered effect */
+}
+.petal-segment:nth-child(3) {
+    bottom: 0;
+    left: 50px; /* Centered horizontally */
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+    transform: rotate(180deg) scale(0);
+    animation-delay: 0.2s;
+}
+.petal-segment:nth-child(4) {
+    top: 50px; /* Centered vertically */
+    left: 0;
+    border-left-color: transparent;
+    border-top-color: transparent;
+    transform: rotate(270deg) scale(0);
+    animation-delay: 0.3s;
+}
+
+/* Outer circle */
+.outer-circle {
+    position: absolute;
+    width: 180px;
+    height: 180px;
+    border: 5px solid black; /* Changed to black */
+    border-radius: 50%;
+    opacity: 0;
+    transform: scale(0);
+    animation: drawCircle 6s ease-in-out infinite;
+    animation-delay: 0.4s;
+    animation-fill-mode: forwards;
+}
+
+/* Inner circle */
+.inner-circle {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border: 5px solid black; /* Changed to black */
+    border-radius: 50%;
+    opacity: 0;
+    transform: scale(0);
+    animation: drawCircle 6s ease-in-out infinite;
+    animation-delay: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+/* Keyframes for the petal segments */
+@keyframes unwindWind {
+    0% {
+        opacity: 0;
+        transform: scale(0); /* Start scaled down and invisible */
+    }
+    10% {
+        opacity: 1;
+        transform: scale(1) rotate(0deg); /* Fully visible and scaled, no rotation */
+    }
+    40% {
+        opacity: 1;
+        transform: scale(1.2) rotate(45deg); /* Unwind effect: scale up and rotate */
+    }
+    60% {
+        opacity: 1;
+        transform: scale(1.2) rotate(45deg); /* Hold unwind state */
+    }
+    90% {
+        opacity: 1;
+        transform: scale(1) rotate(0deg); /* Wind back into place */
+    }
+    100% {
+        opacity: 0;
+        transform: scale(0); /* End scaled down and invisible */
+    }
+}
+
+/* Keyframes for the circles */
+@keyframes drawCircle {
+    0% {
+        opacity: 0;
+        transform: scale(0);
+    }
+    15% {
+        opacity: 1;
+        transform: scale(0.8);
+    }
+    40% {
+        opacity: 1;
+        transform: scale(1); /* Fully drawn */
+    }
+    60% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    90% {
+        opacity: 1;
+        transform: scale(0.8);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(0); /* Disappear */
+    }
 }
