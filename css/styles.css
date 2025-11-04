@@ -285,10 +285,12 @@ height: 58px;
   letter-spacing: -0.3rem; /* -3px */
   margin-bottom: 6rem; /* 60px */
   font-style: normal;
+
 }
 .ancient-title em {
   font-style: italic;
-  font-weight: 600;
+  font-weight: 700;
+  
 }
 .outer-box {
   width: 1184px; /* 1101px */
@@ -369,39 +371,75 @@ height: 58px;
 
 /* Modules Section */
 .modules-section {
-  /* min-height: 100vh; */
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 6rem 2rem;
-  text-align: center;
-  background: linear-gradient(180deg, #FBFAFA 0%, #F7F8FA 60%, #BDE0FF 100%);
-  font-family: "Source Serif Pro", serif;
+  padding: 0rem 2rem 6rem 0rem;
+  background: white;
 }
 .modules-title {
-  font-size: 8.0rem; /* 96px */
+  font-size: 95px; /* 96px */
   line-height: 1.1;
   color: #333;
   font-weight: 500;
   margin-bottom: 3rem;
+  font-family: "Source Serif Pro";
+  text-align: left;
+  font-style: normal;
+  transform: translateX(-100px);
 }
 .modules-title .blue {
   color: #7BC3FF;
 }
 .module-grid {
-  display: grid;
-  grid-template-columns: repeat(5, 16.2rem); /* 162px */
-  gap: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centers the rows horizontally */
+  gap: 6rem; /* This creates the vertical space between rows */
   justify-content: center;
 }
-.module-box {
-  width: 16.2rem; /* 162px */
-  height: 16.2rem; /* 162px */
-  border-radius: 3px;
-  background: #e0e0e0;
+/*
+  NEW: This class takes the grid properties
+  that .module-grid used to have.
+*/
+.module-row {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* Use 1fr to be more flexible */
+  gap: 6rem; /* This creates the horizontal space between boxes */
+  width: 100%; /* Ensure it tries to fill the space */
+  
+  /* Use the dimensions from your .module-box to calculate total width */
+  /* 5 boxes * 20rem + 4 gaps * 6rem = 100rem + 24rem = 124rem */
+  /* We can let the grid items define the width */
+}
+
+/*
+  NEW: These classes create the offset.
+  Adjust the -5rem and 5rem values to your liking!
+*/
+.top-row {
+  transform: translateX(-5rem); /* Moves top row left */
+}
+
+.bottom-row {
+  transform: translateX(5rem); /* Moves bottom row right */
+}
+
+/* New container for box + label */
+.module-container {
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 0.8rem; /* Spaces box and label */
+}
+
+.module-box {
+  width: 20rem; /* 200px */
+  height: 20rem; /* 200px */
+  border-radius: 3px;
+  background: #B9DFFF;
+  display: flex;
+  align-items: center;     
   justify-content: center;
   cursor: pointer;
   transition: transform 0.2s ease;
@@ -410,28 +448,30 @@ height: 58px;
   transform: scale(1.05);
 }
 .module-circle {
-  width: 8rem; /* 80px */
-  height: 8rem; /* 80px */
+  width: 10rem; /* 80px */
+  height: 10rem; /* 80px */
   border-radius: 50%;
-  background: #C2DFFE;
+  background: #B9DFFF;
   position: relative;
 }
-.module-center {
-  width: 2rem; /* 20px */
-  height: 2rem; /* 20px */
-  border-radius: 50%;
-  background: #D21117;
+
+/* Removed .module-center, added .module-icon */
+.module-icon {
+  width: 12rem; /* 35px */
+  height: 12rem; /* 35px */
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
 .module-label {
-  color: #4B4E53;
+  color: #7cc3fc;
   text-align: center;
-  font-size: 2rem; /* 20px */
-  font-weight: 600;
-  margin-top: 0.8rem;
+  font-size: 24px; /* 20px */
+  font-weight: 500;
+  font-family: Inter;
+  /* margin-top removed, using gap in container */
 }
 .shift-right {
   transform: none;
@@ -444,7 +484,7 @@ height: 58px;
   width: 100%;
   height: 100%;
   background: rgba(0,0,0,0.5);
-  display: none;
+  display: none; /* Hidden by default */
   align-items: center;
   justify-content: center;
   z-index: 1000;
@@ -469,19 +509,41 @@ height: 58px;
   font-size: 2.4rem; /* 24px */
   font-style: italic;
   line-height: 1.4;
+  margin-bottom: 2rem; /* Added margin */
 }
-.close-btn {
-  margin-top: 2rem;
-  background: #B9DFFF;
+
+/* New styles for the button container */
+.modal-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+/* Button styles */
+.start-btn, .close-btn {
   border: none;
   border-radius: 0.5rem; /* 5px */
-  padding: 0.6rem 1.2rem;
+  padding: 0.8rem 1.5rem;
   cursor: pointer;
   font-size: 1.8rem; /* 18px */
-  color: #333;
+  font-weight: 500;
   transition: background 0.3s;
+  text-decoration: none; /* For the <a> tag */
+  display: inline-block;
+  font-family: "DM Sans";
+}
+.close-btn {
+  background: #eee;
+  color: #555;
 }
 .close-btn:hover {
+  background: #ddd;
+}
+.start-btn {
+  background: #B9DFFF;
+  color: #333;
+}
+.start-btn:hover {
   background: #7BC3FF;
 }
 

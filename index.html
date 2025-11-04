@@ -6,7 +6,7 @@
   <title>Our Sacred Union</title>
 
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500&family=Source+Serif+Pro:ital,wght@1,400&family=Inter:wght@400&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500&family=Source+Serif+Pro:wght@500;ital,wght@400;600&family=Inter:wght@400;700&display=swap" rel="stylesheet" />
 
   <!-- Styles -->
   <link rel="stylesheet" href="css/styles.css" />
@@ -146,71 +146,140 @@
     </div>
   </section>
 
-<section class="modules-section" id="modules">
+  <section class="modules-section" id="modules">
   <h1 class="modules-title">
     A lifetime of <span class="blue">connection</span><br>
     in just <span class="blue">10 workshops</span>
   </h1>
 
   <div class="module-grid">
-    <!-- Top row (Modules 1–5) -->
-    <div class="module-box" data-module="1">
-      <div class="module-circle"><div class="module-center"></div></div>
+
+  <div class="module-row top-row">
+    <div class="module-container">
+      
+      <div class="module-box" data-module="1">
+        <div class="module-circle">
+          <img src="logos/whiteLineRedDot.png" alt="Module Icon" class="module-icon">
+        </div></div>
       <div class="module-label">Module 1</div>
-      <a href="start.html">
-      <button class="start-btn">start now</button>
-    </a>
     </div>
-    <div class="module-box" data-module="2">
-      <div class="module-circle"><div class="module-center"></div></div>
+    <div class="module-container">
+      <div class="module-box" data-module="2"><div class="module-circle">
+          <img src="logos/whiteLineRedDot.png" alt="Module Icon" class="module-icon">
+        </div></div>
       <div class="module-label">Module 2</div>
     </div>
-    <div class="module-box" data-module="3">
-      <div class="module-circle"><div class="module-center"></div></div>
+    <div class="module-container">
+      <div class="module-box" data-module="3"><div class="module-circle">
+          <img src="logos/whiteLineRedDot.png" alt="Module Icon" class="module-icon">
+        </div></div>
       <div class="module-label">Module 3</div>
     </div>
-    <div class="module-box" data-module="4">
-      <div class="module-circle"><div class="module-center"></div></div>
+    <div class="module-container">
+      <div class="module-box" data-module="4"><div class="module-circle">
+          <img src="logos/whiteLineRedDot.png" alt="Module Icon" class="module-icon">
+        </div></div>
       <div class="module-label">Module 4</div>
     </div>
-    <div class="module-box" data-module="5">
-      <div class="module-circle"><div class="module-center"></div></div>
+    <div class="module-container">
+      <div class="module-box" data-module="5"><div class="module-circle">
+          <img src="logos/whiteLineRedDot.png" alt="Module Icon" class="module-icon">
+        </div></div>
       <div class="module-label">Module 5</div>
     </div>
+  </div>
 
-    <!-- Bottom row (Modules 6–10) -->
-    <div class="module-box shift-right" data-module="6">
-      <div class="module-circle"><div class="module-center"></div></div>
+  <div class="module-row bottom-row">
+    <div class="module-container">
+      <div class="module-box" data-module="6"><div class="module-circle">
+          <img src="logos/whiteLineRedDot.png" alt="Module Icon" class="module-icon">
+        </div></div>
       <div class="module-label">Module 6</div>
     </div>
-    <div class="module-box shift-right" data-module="7">
-      <div class="module-circle"><div class="module-center"></div></div>
+    <div class="module-container">
+      <div class="module-box" data-module="7"><div class="module-circle">
+          <img src="logos/whiteLineRedDot.png" alt="Module Icon" class="module-icon">
+        </div></div>
       <div class="module-label">Module 7</div>
     </div>
-    <div class="module-box shift-right" data-module="8">
-      <div class="module-circle"><div class="module-center"></div></div>
+    <div class="module-container">
+      <div class="module-box" data-module="8"><div class="module-circle">
+          <img src="logos/whiteLineRedDot.png" alt="Module Icon" class="module-icon">
+        </div></div>
       <div class="module-label">Module 8</div>
     </div>
-    <div class="module-box shift-right" data-module="9">
-      <div class="module-circle"><div class="module-center"></div></div>
+    <div class="module-container">
+      <div class="module-box" data-module="9"><div class="module-circle">
+          <img src="logos/whiteLineRedDot.png" alt="Module Icon" class="module-icon">
+        </div></div>
       <div class="module-label">Module 9</div>
     </div>
-    <div class="module-box shift-right" data-module="10">
-      <div class="module-circle"><div class="module-center"></div></div>
+    <div class="module-container">
+      <div class="module-box" data-module="10"><div class="module-circle">
+          <img src="logos/whiteLineRedDot.png" alt="Module Icon" class="module-icon">
+        </div></div>
       <div class="module-label">Module 10</div>
     </div>
   </div>
 
-  <!-- Modal -->
+</div>
+
   <div class="modal" id="moduleModal">
     <div class="modal-content">
-      <h2 id="moduleTitle">Module 1</h2>
-      <p id="moduleDescription">something beautiful is on the way. stay connected.</p>
-      <button class="close-btn" id="closeModal">Close</button>
+      <h2 id="modalTitle">Module 1</h2>
+      <p id="modalDescription">something beautiful is on the way. stay connected.</p>
+      
+      <div class="modal-buttons">
+        <button class="close-btn" id="closeModal">Close</button>
+        <a href="#" id="modalStartBtn" class="start-btn">Start Now</a>
+      </div>
     </div>
   </div>
 
-  
+  <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    // Get all the elements we need
+    const moduleBoxes = document.querySelectorAll(".module-box");
+    const modal = document.getElementById("moduleModal");
+    const closeModalBtn = document.getElementById("closeModal");
+    const modalTitle = document.getElementById("modalTitle");
+    const modalStartBtn = document.getElementById("modalStartBtn");
+    
+    // Add a click event to EACH module box
+    moduleBoxes.forEach(box => {
+      box.addEventListener("click", () => {
+        // 1. Get the module number from the box's "data-module" attribute
+        const moduleNumber = box.dataset.module;
+        
+        // 2. Update the modal's content
+        modalTitle.textContent = `Module ${moduleNumber}`;
+        
+        // 3. Set the "Start Now" button's link
+        //    (Assuming your course page is course.html)
+        modalStartBtn.href = `course.html?module=${moduleNumber}`;
+        
+        // 4. Show the modal
+        modal.style.display = "flex";
+      });
+    });
+    
+    // Function to close the modal
+    function closeModal() {
+      modal.style.display = "none";
+    }
+    
+    // 5. Add click event to the "Close" button
+    closeModalBtn.addEventListener("click", closeModal);
+    
+    // 6. Add click event to the modal background (to close it)
+    modal.addEventListener("click", (event) => {
+      // Only close if they click on the background itself, not the content
+      if (event.target === modal) {
+        closeModal();
+      }
+    });
+  });
+</script>
 
 </section>
 
