@@ -35,7 +35,7 @@ body {
 .navbar .start-btn {
   background: #B9DFFF;
   padding: 0.4rem 1.2rem;
-  font-size: 24px; /* 18px */
+  font-size: 20px; /* 18px */
   text-transform: lowercase;
   border: none;
   cursor: pointer;
@@ -46,8 +46,8 @@ body {
   justify-content: center;
   align-items: center;
 
-  width: 141px; /* 141px */
-  height: 49px; /* 49px */
+  width: 130px; /* 141px */
+  height: 40px; /* 49px */
   flex-shrink: 0;
   border-radius: 0.6rem; /* 6px curvature */
   display: flex;
@@ -161,18 +161,21 @@ height: 58px;
   justify-content: center;
 }
 
-.deeper-line {
-  width: 800px;
-  height: 1px; /* 561px */
-  background: #E10606;
-  transform: translateY(-14.8rem) translateX(-3rem);
-}
 .deeper-line2 {
-  width: 151.2px;
+  /* width: 151.2px; */
+  width: 158px;
   height: 1px; /* 561px */
   background: #ffffff;
-  transform: translateY(-14.95rem) translateX(-24rem);
+  transform: translateY(-12rem) translateX(-25rem);
 }
+
+.deeper-line {
+  width: 900px;
+  height: 1px; /* 561px */
+  background: #E10606;
+  transform: translateY(-11.85rem) translateX(-3rem);
+}
+
 
 
 /* Replaces all the old .circle-design rules */
@@ -187,9 +190,10 @@ height: 58px;
   padding: 3rem;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: center;  
   align-items: flex-start;
   box-sizing: border-box;
+  
 }
 /* sacred opporutnity box */
 .tagline {
@@ -200,8 +204,9 @@ height: 58px;
   padding: 0.3rem 1rem;
   font-size: 20px; /* 20px */
   font-weight: 300;
-  margin-bottom: 5rem;
+  margin-bottom: 0rem;
   margin-left: 30px;
+  transform: translateY(15rem);
   
   display: flex;
   align-items: center;     /* This centers the text vertically */
@@ -216,10 +221,10 @@ height: 58px;
   font-size: 128px; /* 96px */
   font-weight: 300;
   line-height: 100px; /* 78.125% */
-  margin: 0 0 1.5rem 0;
   letter-spacing: -0.3rem; /* -2px */
-    margin-left: 30px;
+  margin-left: 30px;
   margin-bottom: 30px;
+  transform: translateY(3rem);
 }
 
 
@@ -229,8 +234,10 @@ height: 58px;
   font-size: 2.8rem; /* 28px */
   font-weight: 400;
   line-height: 1.3;
-  width: 531px;
+  width: 640px;
   margin-left: 30px;
+  transform: translateY(-13rem);
+  text-align: justify;
 
 }
 
@@ -248,6 +255,7 @@ height: 58px;
   border: none;
   
   font-weight: 300;
+  transform: translateY(-15rem);
   
   /* Appearance & Font */
   background: #B9DFFF;
@@ -780,23 +788,23 @@ height: 58px;
 }
 .create-title {
   display: flex;
-  width: 112.6rem; /* 1126px */
+  width: 200rem; /* 1126px */
   height: 13.7rem; /* 137px */
   flex-direction: column;
   justify-content: center;
   color: #D21117;
   text-align: center;
   font-family: "Source Serif 4", serif;
-  font-size: 9rem; /* 110px */
+  font-size: 110px; /* 110px */
   font-style: italic;
-  font-weight: 600;
+  font-weight: normal;
   line-height: 9rem; /* 90px */
   letter-spacing: -0.3rem; /* -3px */
   margin-bottom: 6rem; /* 60px */
 }
 .create-box {
-  width: 121.6rem; /* 1216px */
-  height: 56.1rem; /* 561px */
+  width: 181.5rem; /* 1216px */
+  height: 84rem; /* 561px */
   border-radius: 1rem; /* 10px */
   background: #FFF;
   box-shadow: 0 1rem 2rem 1.5rem rgba(221, 206, 206, 0.25);
@@ -807,15 +815,15 @@ height: 58px;
 }
 .create-subtitle {
   display: flex;
-  width: 107.1rem; /* 1071px */
+  width: 160rem; /* 1071px */
   height: 22.4rem; /* 224px */
   flex-direction: column;
   justify-content: center;
   color: #7BC3FF;
   text-align: center;
   font-family: "Source Serif 4", serif;
-  font-size: 9rem; /* 96px */
-  font-style: italic;
+  font-size: 10rem; /* 96px */
+  font-style: normal;
   font-weight: 400;
   line-height: 8rem; /* 80px */
   letter-spacing: -0.3rem; /* -3px */
@@ -823,19 +831,20 @@ height: 58px;
 }
 .create-content {
   display: flex;
-  width: 100.9rem; /* 1009px */
-  height: 22.4rem; /* 224px */
+  width: 150rem; /* 1009px */
+  height: 30rem; /* 224px */
   flex-direction: column;
   justify-content: center;
   color: #4B4E53;
   text-align: center;
   font-family: "Inter", sans-serif;
-  font-size: 2.8rem; /* 28px */
+  font-size: 5rem; /* 28px */
   font-style: normal;
   font-weight: 400;
-  line-height: 2.8rem; /* 28px */
+  line-height: 5rem; /* 28px */
   letter-spacing: 0.025rem; /* 0.25px */
   margin: 0;
+  transform: translateY(10rem);
 }
 
 /* Chapter Section */
@@ -1069,11 +1078,54 @@ height: 58px;
   font-weight: 400;
   line-height: 3.5rem; /* 35px */
   letter-spacing: 0.025rem; /* 0.25px */
-  margin: 1rem 0 0 0;
+  margin: -1rem 0 0 0;
 }
 .donation-subtitle strong {
   font-weight: 600;
 }
+
+.donationStart-btn {
+  /* --- STYLES RETAINED FROM THE ORIGINAL BUTTON --- */
+  background: #B9DFFF;
+  padding: 0.4rem 1.2rem;
+  font-size: 18px; /* 18px */
+  text-transform: lowercase;
+  border: none;
+  cursor: pointer;
+  transform: translateY(-0.5rem) translateX(0rem); /* 5px */
+
+  text-align: center;
+  font-family: "DM Sans";
+  /* These display/alignment properties are crucial for styling the <a> tag as a block/button */
+  justify-content: center;
+  align-items: center; 
+
+  width: 90px; /* 141px */
+  height: 20px; /* 49px */
+  flex-shrink: 0;
+  border-radius: 0.6rem; /* 6px curvature */
+  display: flex;
+  line-height: 1;
+  font-weight: 300;
+
+  /* --- FIX: Removing the Underline Across All Link States --- */
+  text-decoration: none; 
+  /* The color must be set explicitly since <a> tags often default to blue/purple */
+  color: #353635; 
+  
+  transition: background 0.3s;
+}
+
+.donationStart-btn:hover {
+  /* This hover color seems dark/red for a blue button; consider matching the existing aesthetic */
+  /* If you intend this to be a darker blue/red: */
+  background: #d16f73; 
+  /* If the text should change or stay the same: */
+  text-decoration: none; /* Good practice, even though it's set above */
+  color: white;
+}
+
+
 .polaroid-grid {
   display: flex;
   justify-content: center;
@@ -1099,13 +1151,13 @@ height: 58px;
 }
 .polaroid-frame {
   width: 24.02rem; /* 240.208px */
-  height: 29.73rem; /* 297.31px */
+  height: 29.73rem; /* 297.31px */  
   overflow: hidden;
   position: relative;
 }
 .polaroid-img {
   width: 100%;
-  height: 121.27%;
+  height: 100%;
   object-fit: cover;
   transform: translateY(-0.005rem); /* -0.052px */
 }
@@ -1119,7 +1171,6 @@ height: 58px;
   transform: rotate(8.321deg);
 }
 .polaroid-card.highlighted {
-  border: 7px solid #C2DFFE;
   margin-top: -0.7rem; /* -7px */
 }
 /* ===============================
@@ -1279,7 +1330,7 @@ height: 58px;
     animation-fill-mode: forwards;
 }
 
-/* Keyframes for the petal segments */
+/* Keyframes for the petal segments */  
 @keyframes unwindWind {
     0% {
         opacity: 0;
