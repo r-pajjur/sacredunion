@@ -70,6 +70,7 @@ body {
   gap: 1.5rem; /* 15px */
   margin-bottom: 2rem;
 }
+/* module numebrs at top */
 .module-nav-btn {
   width: 5.2rem; /* 52px */
   height: 3.4rem; /* 34px */
@@ -144,7 +145,7 @@ body {
   color: #8E8E8E;
   text-align: center;
   font-family: Inter, sans-serif;
-  font-size: 2.8rem; /* 28px */
+  font-size: 2.27rem; /* 28px */
   font-weight: 700;
   line-height: 1;
   letter-spacing: 0.025rem; /* 0.25px */

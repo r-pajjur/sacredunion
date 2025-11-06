@@ -121,7 +121,7 @@ body {
 
 /* Q&A Bubble */
 .search-box {
-  width: 572px;
+  width: 580px;
 height: 58px;
   border-radius: 20rem; /* 200px */
   background: #7BC3FF;
@@ -514,17 +514,20 @@ height: 58px;
   text-align: center;
   box-shadow: 0 1rem 2.5rem rgba(0,0,0,0.2);
   animation: fadeUp 0.4s ease forwards;
+  font-family: "Source Serif 4", serif;
 }
 .modal-content h2 {
   color: #ff7b7b;
   font-weight: 500;
   font-size: 4.8rem; /* 48px */
   margin-bottom: 1rem;
+  font-style: italic;
+  font-family: "Source Serif 4", serif;
 }
 .modal-content p {
   color: #7BC3FF;
   font-size: 2.4rem; /* 24px */
-  font-style: italic;
+  
   line-height: 1.4;
   margin-bottom: 2rem; /* Added margin */
 }
@@ -653,7 +656,7 @@ height: 58px;
   text-align: left;
 }
 .content-right {
-  flex: 1.25;
+  flex: 6.5%;
   background: #C2DFFE;
 }
 #contentTitle {
@@ -668,11 +671,30 @@ height: 58px;
 #contentText {
   color: #4B4E53;
   font-family: "Source Serif 4", sans-serif;
-  font-size: 2.4rem; /* 24px */
+  font-size: 2.2rem; /* 24px */
   font-weight: 400;
   line-height: 1.4;
-  width: 90%;
+  width: 100%;
   font-style: normal;
+}
+
+/* Change Section - Hover Effect */
+
+.change-box:hover {
+  /* Slightly lift the shadow or change the shadow color to give a hint of interaction */
+  box-shadow: 0 4px 1.8rem rgba(0, 0, 0, 0.2); 
+  
+  /* Option A: Slight background change (e.g., to light gray/red tint) */
+  background: #f7bdbd; 
+  
+  /* Option B: Slight transform/lift (you already have a transform on .active, but this is subtle) */
+  /* transform: translateY(-1px); */
+}
+
+/* Ensure the active box still works correctly when hovered */
+.change-box.active:hover {
+  background: #a10e13; /* A slightly darker red for the active state on hover */
+  box-shadow: 0 5px 2rem rgba(0, 0, 0, 0.3);
 }
 
 /* Guides Section */
@@ -732,6 +754,15 @@ height: 58px;
   object-fit: cover;
 }
 
+.left-card {
+  z-index: 2; /* Higher value means it overlaps */
+}
+
+/* Right Card - Keep in back (optional, but good practice) */
+.right-card {
+  z-index: 1; 
+}
+
 .right-card .guide-photo-frame {
   transform: rotate(7.3deg) translateY(40rem); /* 400px */
 }
@@ -763,7 +794,7 @@ height: 58px;
   font-weight: 400;
   line-height: 5rem; /* 50px */
   margin-top: 1rem;
-  transform: rotate(7.2deg) translateY(30rem) translateX(-4rem); /* 300px, 40px */
+  transform: rotate(7.3deg) translateY(30rem) translateX(-4.5rem); /* 300px, 40px */
 }
 .guide-caption {
   color: #4B4E53;
@@ -992,9 +1023,9 @@ height: 58px;
   transition: max-height 0.4s ease-out, padding 0.4s ease-out;
 }
 .faq-answer p {
-  color: #4B4E53;
+  color: #0267ba;
   font-family: "Inter", sans-serif;
-  font-size: 2.4rem; /* 18px */
+  font-size: 2.2rem; /* 18px */
   line-height: 1.6;
   margin: 0;
 }

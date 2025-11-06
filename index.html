@@ -39,19 +39,6 @@
     <div class="answer" id="answer"></div>
   </section>
 
-  <!-- <div class="flower-container">
-  <div class="center-dot"></div>
-  <div class="petal-segment"></div>
-  <div class="petal-segment"></div>
-  <div class="petal-segment"></div>
-  <div class="petal-segment"></div>
-  <div class="outer-circle"></div>
-  <div class="inner-circle"></div>
-</div> -->
-
-  
-
-  
 
   <!-- Sacred Opportunity Section -->
   <section class="section">
@@ -79,7 +66,7 @@
         Commit to this journey to ensure your marriage remains a powerful 
         ground for spiritual evolution and inner joy.
       </p>
-      <<a href="start.html" class="deeperStart-btn">dive deeper</a>
+      <a href="start.html" class="deeperStart-btn">dive deeper</a>
       <div class="ancient-divider"></div>
     </div>
 
@@ -92,7 +79,7 @@
     const questions = [
       "how do I grow without outgrowing them?",
       "why do the same issues keep coming back?",
-      "how do I accept them as they are without lowering my bar?",
+      "how do I accept them as they are, without lowering my bar?",
       "how do I ask for support without feeling needy?"
     ];
 
@@ -122,7 +109,7 @@
     showQuestion(currentIndex);
   </script>
 
-  <!-- Ancient Section -->
+<!-- Ancient Section -->
   <section class="ancient">
     <!-- Title -->
     <h2 class="ancient-title">
@@ -163,7 +150,9 @@
     </div>
   </section>
 
-  <section class="modules-section" id="modules">
+  <!-- Modules Section -->
+
+ <section class="modules-section" id="modules">
   <h2 class="modules-title">
     A lifetime of <span class="blue">connection</span><br>
     in just <span class="blue">10 workshops</span>
@@ -247,56 +236,14 @@
       <p id="modalDescription">something beautiful is on the way. stay connected.</p>
       
       <div class="modal-buttons">
+        <a href="start.html" id="modalStartBtn" class="start-btn">Start Now</a> <!--Here is what I want-->
+        <!-- <a href="donate.html" id="modalDonateBtn" class="donate-btn">Donate</a> -->
+        
         <button class="close-btn" id="closeModal">Close</button>
-        <a href="#" id="modalStartBtn" class="start-btn">Start Now</a>
+        
       </div>
     </div>
   </div>
-
-  <script>
-  document.addEventListener("DOMContentLoaded", () => {
-    // Get all the elements we need
-    const moduleBoxes = document.querySelectorAll(".module-box");
-    const modal = document.getElementById("moduleModal");
-    const closeModalBtn = document.getElementById("closeModal");
-    const modalTitle = document.getElementById("modalTitle");
-    const modalStartBtn = document.getElementById("modalStartBtn");
-    
-    // Add a click event to EACH module box
-    moduleBoxes.forEach(box => {
-      box.addEventListener("click", () => {
-        // 1. Get the module number from the box's "data-module" attribute
-        const moduleNumber = box.dataset.module;
-        
-        // 2. Update the modal's content
-        modalTitle.textContent = `Module ${moduleNumber}`;
-        
-        // 3. Set the "Start Now" button's link
-        //    (Assuming your course page is course.html)
-        modalStartBtn.href = `course.html?module=${moduleNumber}`;
-        
-        // 4. Show the modal
-        modal.style.display = "flex";
-      });
-    });
-    
-    // Function to close the modal
-    function closeModal() {
-      modal.style.display = "none";
-    }
-    
-    // 5. Add click event to the "Close" button
-    closeModalBtn.addEventListener("click", closeModal);
-    
-    // 6. Add click event to the modal background (to close it)
-    modal.addEventListener("click", (event) => {
-      // Only close if they click on the background itself, not the content
-      if (event.target === modal) {
-        closeModal();
-      }
-    });
-  });
-</script>
 
 </section>
 
@@ -318,8 +265,7 @@
     <div class="content-left">
       <h2 id="contentTitle">watch ↑</h2>
       <p id="contentText">
-        something beautiful is on the way. stay connected. something beautiful
-        is on the way. stay connected. something beautiful is on the way. stay connected.
+        Watch the core video discourse by our guides, which systematically unpacks the Vedantic concepts central to the module's lesson.   
       </p>
     </div>
     <div class="content-right"></div>
@@ -332,10 +278,10 @@
   const textEl = document.getElementById("contentText");
 
   const content = {
-    watch: "something beautiful is on the way. stay connected. something beautiful is on the way. stay connected.",
-    read: "something beautiful is on the way. stay connected. something beautiful is on the way. stay connected.",
-    practice: "something beautiful is on the way. stay connected. something beautiful is on the way. stay connected.",
-    internalize: "something beautiful is on the way. stay connected. something beautiful is on the way. stay connected."
+    watch: "Watch the core video discourse by our guides, which systematically unpacks the Vedantic concepts central to the module's lesson.",
+    read: "Read the supporting literature and scriptural references, designed to reinforce the video's concepts.",
+    practice: "Practice the daily actions assigned for the module, intended for both individual and mutual participation with your partner.",
+    internalize: "Internalize the teaching through reflection and journaling, observing how the concepts and practices are reshaping your thoughts and reactions."
   };
 
   boxes.forEach((box) => {
@@ -362,51 +308,85 @@
     <!-- Left Card -->
     <div class="guide-card left-card">
       <div class="guide-photo-frame">
-        <img src="images/me.PNG" alt="Vivek Gupta" class="guide-photo" />
+        <img src="images/vivekji.JPG" alt="Vivek Gupta" class="guide-photo" />
       </div>
       <h2 class="guide-name1">Vivek Gupta</h2>
       <p class="guide-caption left-caption">
-        Vivek Gupta, married in 2008 to his loving wife Sheela, trained in a
-        monastery under a master, over XXXX number of community members
+        Suman Rajupet, married in xxx to Swati, trained in a monastery under a master,
+        over xxx number of community members
+        
       </p>
     </div>
 
     <!-- Right Card -->
     <div class="guide-card right-card">
       <div class="guide-photo-frame">
-        <img src="images/sumanji.PNG" alt="Suman Rajupet" class="guide-photo" />
+        <img src="images/sumanji2.PNG" alt="Suman Rajupet" class="guide-photo" />
       </div>
       <h2 class="guide-name2">Suman Rajupet</h2>
       <p class="guide-caption right-caption">
-        Vivek Gupta, married in 2008, trained in a monastery under a master,
-        over XXXX number of community members
+        Vivek Gupta, married in 2008 to his loving wife Sheela, trained in a
+        monastery under a master, over xxx number of community members
       </p>
     </div>
   </div>
 </section>
 
-<!--Modules opening boxes-->
+<!-- </* --- MODULES OPENING BOXES SCRIPT (Updated) --- */
 <script>
   // Select all the necessary elements from the page
   const moduleBoxes = document.querySelectorAll(".module-box");
   const modal = document.getElementById("moduleModal");
-  const modalTitle = document.getElementById("moduleTitle");
-  const modalDescription = document.getElementById("moduleDescription");
+  // NOTE: These variables are correctly defined here:
+  const modalTitle = document.getElementById("modalTitle"); 
+  const modalDescription = document.getElementById("modalDescription"); 
   const closeModalBtn = document.getElementById("closeModal");
+  const modalStartBtn = document.getElementById("modalStartBtn"); // Get the Start button
+  const modalDonateBtn = document.getElementById("modalDonateBtn"); // Get the Donate button
 
   // Create an object to hold the content for each module
-  const moduleContent = {
-    1: { title: "Module 1: Under Construction", description: "Something beautiful is on the way. Stay connected." },
-    2: { title: "Module 2: Construction", description: "Something beautiful is on the way. Stay connected." },
-    3: { title: "Module 3: Construction", description: "Something beautiful is on the way. Stay connected." },
-    4: { title: "Module 4: Construction", description: "Something beautiful is on the way. Stay connected." },
-    5: { title: "Module 5: Construction", description: "Something beautiful is on the way. Stay connected" },
-    6: { title: "Module 6: Construction", description: "Something beautiful is on the way. Stay connected" },
-    7: { title: "Module 7: Construction", description: "Something beautiful is on the way. Stay connected" },
-    8: { title: "Module 8: Construction", description: "Something beautiful is on the way. Stay connected" },
-    9: { title: "Module 9: Construction", description: "Something beautiful is on the way. Stay connected" },
-    10: { title: "Module 10: Construction", description: "Something beautiful is on the way. Stay connected" }
-  };
+  // const moduleContent = {
+  //   1: { 
+  //     title: "The Vision of Your Marriage", 
+  //     description: "Marriage brings together practical responsibilities, emotional intimacy, and spiritual questions. Without a shared 'why,' a relationship can drift off course. This workshop guides you to craft a vision and mission together, clarifying what you hope to receive and what you plan to give." 
+  //   },
+  //   2: { 
+  //     title: "Evolving Through Each Other", 
+  //     description: "Learn how to use your relationship as a powerful engine for mutual growth. This workshop provides tools to support, challenge, and uplift each other daily, ensuring that your individual evolution strengthens your shared journey." 
+  //   },
+  //   3: { 
+  //     title: "Partners in Ideals, Not Ideal Partners", 
+  //     description: "Shift your focus from seeking a 'perfect' partner to aligning on shared ideals and values. This workshop helps you embrace imperfections while clarifying the moral and spiritual foundation of your partnership." 
+  //   },
+  //   4: { 
+  //     title: "Emotional Safety, Emotional Depth", 
+  //     description: "Explore the foundations of psychological security in your relationship. Learn the practices necessary to create a space where vulnerability thrives, moving beyond surface interactions to profound emotional intimacy." 
+  //   },
+  //   5: { 
+  //     title: "Speaking So You Hear Each Other", 
+  //     description: "Communication isn't just about talking; it's about being understood. This workshop teaches listening skills and communication frameworks designed to minimize defensive reactions and ensure mutual clarity." 
+  //   },
+  //   6: { 
+  //     title: "Disagreeing Without Disconnecting", 
+  //     description: "Conflict is inevitable, but disconnection is not. Gain strategies for navigating disagreements healthily, ensuring that you address issues without sacrificing the fundamental trust and closeness of your union." 
+  //   },
+  //   7: { 
+  //     title: "Enough: Money & Meaning", 
+  //     description: "Unravel the intersection of material stability and spiritual purpose. This workshop helps couples align their financial decisions with their deeper values, ensuring money is a tool for fulfillment, not a source of stress." 
+  //   },
+  //   8: { 
+  //     title: "Intimacy Beyond the Surface", 
+  //     description: "Deepen physical, mental, and emotional intimacy. This module explores how to sustain closeness over time, cultivating a connection that transcends routine and honors the unique bond you share." 
+  //   },
+  //   9: { 
+  //     title: "Shaping Your Circle of Influence", 
+  //     description: "Address the external influences on your marriage—from family and friends to media. Learn how to consciously manage your boundaries and create an external environment that supports your shared vision and spiritual health." 
+  //   },
+  //   10: { 
+  //     title: "Marriage as a Spiritual Practice", 
+  //     description: "The culmination of the course: viewing every daily interaction as an opportunity for spiritual growth. Learn how to maintain intentionality and commitment indefinitely, ensuring perpetual upliftment." 
+  //   }
+  // };
 
   // Add a click event listener to each module box
   moduleBoxes.forEach(box => {
@@ -420,6 +400,9 @@
       // Update the modal's title and description
       modalTitle.textContent = content.title;
       modalDescription.textContent = content.description;
+
+      // Set the "Start Now" button's link
+      modalStartBtn.href = `start.html?module=${moduleNumber}`;
       
       // Show the modal
       modal.style.display = "flex";
@@ -440,7 +423,7 @@
       closeModal();
     }
   });
-</script>
+</script> -->
 
 <!--why did we create this section-->
 <section class="create-section">
@@ -505,7 +488,7 @@
     
     <div class="polaroid-card four">
       <div class="polaroid-frame">
-        <img src="images/me.PNG" alt="Happy Couple" class="polaroid-img" />
+        <img src="images/rupali.PNG" alt="Happy Couple" class="polaroid-img" />
       </div>
     </div>
     
@@ -529,9 +512,10 @@
     <div class="chapter-line"></div>
 
     <p class="chapter-content">
-      something beautiful is on the way. stay connected. something beautiful is on the way.
-      stay connected. something beautiful is on the way. stay connected. something beautiful
-      is on the way. stay connected.
+      Work through the Sacred Union workbook to gain a durable, 
+      asting guide for cultivating a sacred, meaning-driven partnership. 
+      This beautifully compiled book transforms the course's essential teachings on evolution and intentionality into a p
+      ermanent anchor for your shared journey.
     </p>
   </div>
 
@@ -556,66 +540,71 @@
       </button>
       <div class="faq-answer">
         <p>
-          Something beautiful is on the way. stay connected. something beautiful is on the way. stay connected. something beautiful is on the way. stay connected.
+          The course is built upon the ancient framework of Vedanta, 
+          which focuses on the "science of oneness". It defines marriage 
+          as Vivāha—a "special upliftment", 
+          where the goal is not just partnership, but evolution into independently joyful souls.
         </p>
       </div>
     </div>
 
     <div class="faq-item">
       <button class="faq-question">
-        <span>Under Construction: Stay Tuned</span>
+        <span>How is this different from typical relationship counseling?</span>
         <span class="faq-toggle">+</span>
       </button>
       <div class="faq-answer">
         <p>
-          Something beautiful is on the way. stay connected. something beautiful is on the way. stay connected. something beautiful is on the way. stay connected.
+          Traditional counseling often focuses on fixing immediate problems and improving 
+          external communication, but this course targets the root cause: purpose. 
+          It will provide a philosophical and spiritual framework that transforms your 
+          relationship into a powerful ground for inner growth, ensuring your joy doesn't depend on external ease.
         </p>
       </div>
     </div>
 
     <div class="faq-item">
       <button class="faq-question">
-        <span>Under Construction: Stay Tuned</span>
+        <span>Does this program address practical issues like money and communication?</span>
         <span class="faq-toggle">+</span>
       </button>
       <div class="faq-answer">
         <p>
-          Something beautiful is on the way. stay connected. something beautiful is on the way. stay connected. something beautiful is on the way. stay connected.
+          Yes. The 10 workshops balance spiritual growth with worldly life. We dedicate entire modules to topics like financial alignment (Enough: Money & Meaning, Module 7) and effective communication (Speaking So You Hear Each Other, Module 5) to unite the practical and spiritual sides of your life.
         </p>
       </div>
     </div>
 
     <div class="faq-item">
       <button class="faq-question">
-        <span>Under Construction: Stay Tuned</span>
+        <span>Will this help us manage conflict better?</span>
         <span class="faq-toggle">+</span>
       </button>
       <div class="faq-answer">
         <p>
-Something beautiful is on the way. stay connected. something beautiful is on the way. stay connected. something beautiful is on the way. stay connected.        </p>
-      </div>
+Absolutely. The course provides clear tools for disagreeing without disconnecting (Module 6) 
+and teaches that you cannot control another person's evolution. The focus shifts to managing 
+your own responses and using conflict as a challenge that deepens, rather than breaks, your connection.      </div>
     </div>
 
     <div class="faq-item">
       <button class="faq-question">
-        <span>Under Construction: Stay Tuned</span>
+        <span>Is this course only for couples who are struggling?</span>
         <span class="faq-toggle">+</span>
       </button>
       <div class="faq-answer">
         <p>
-Something beautiful is on the way. stay connected. something beautiful is on the way. stay connected. something beautiful is on the way. stay connected.        </p>
-      </div>
+No, this course is for any couple moving deeper than "I do". While it provides immense value during difficult times, its main purpose is to help couples evolve together, moving past routine and survival to craft a meaningful shared vision.      </div>
     </div>
 
     <div class="faq-item">
       <button class="faq-question">
-        <span>Under Construction: Stay Tuned</span>
+        <span>What if I want to grow, but my partner doesn't share this desire?</span>
         <span class="faq-toggle">+</span>
       </button>
       <div class="faq-answer">
         <p>
-Something beautiful is on the way. stay connected. something beautiful is on the way. stay connected. something beautiful is on the way. stay connected.        </p>
-      </div>
+Personal growth always starts with self-work. The course addresses this challenge directly, encouraging you to begin with small, intentional practices like gratitude and daily kindness. By modeling self-development, you naturally foster growth within the relationship without demanding change from your partner.      </div>
     </div>
     
     </div>
@@ -667,6 +656,93 @@ Something beautiful is on the way. stay connected. something beautiful is on the
       </svg>
     </div>
   </footer>
+
+  <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    // Select all the necessary elements from the page
+    const moduleBoxes = document.querySelectorAll(".module-box");
+    const modal = document.getElementById("moduleModal");
+    const modalTitle = document.getElementById("modalTitle"); 
+    const modalDescription = document.getElementById("modalDescription"); 
+    const closeModalBtn = document.getElementById("closeModal");
+    const modalStartBtn = document.getElementById("modalStartBtn"); 
+
+    // Create the object to hold the content for each module
+    const moduleContent = {
+      1: { 
+        title: "The Vision of Your Marriage", 
+        description: "Marriage brings together practical responsibilities, emotional intimacy, and spiritual questions in one shared space, which is why it can accelerate both our comfort and our growth. Without a shared “why,” a relationship can drift off course. Crafting a vision and mission together clarifies what you hope to receive and what you plan to give."
+},
+      2: { 
+        title: "Evolving Through Each Other", 
+        description: "Re-frame how you see challenges – not as signs that something is “wrong,” but as turning points that can deepen your bond. The heart of mutual evolution is a deep love for who your partner is, not just for what they do for you. Nurture this deep love by following a simple progression: respect -> love -> reverence. Building this framework, especially early in marriage, will allow you to approach challenges as opportunities for growth."
+        },
+      3: { 
+        title: "Partners in Ideals, Not Ideal Partners", 
+        description: "By letting go of unrealistic expectations, remembering the strengths your partner already brings to your relationship, and setting a series of shared ideals for both you and your partner to grow into, marriage can support shared self-development instead of causing resentment."
+        },
+      4: { 
+        title: "Emotional Safety, Emotional Depth", 
+        description: "Emotional support for your partner is not about fixing or completing each other, but about walking side by side with maturity and care. Two strategies can help us when we feel that our own emotional needs are being unmet: self-check (remembering that the way we give and receive love may be different from our partner) and self-love (remembering that our partner cannot offer us the completeness we seek)." 
+      },
+      5: { 
+        title: "Speaking So You Hear Each Other", 
+        description: "Each of us carries a private history of experiences, hurts, preferences, and judgments, and when we listen through that lens, it can lead to miscommunication. Frustration builds when we feel an urgency to communicate something with our partners, but feel that they are not understanding us. A 4-step plan to overcome miscommunication: listen fully, pause before reacting, reflect back what you understood, make sure the words you choose pass the “truthful, useful, beautiful (TUB)” test. " 
+      },
+      6: { 
+        title: "Disagreeing Without Disconnecting", 
+        description:"Conflict is unavoidable in a relationship. When dealing with conflict, remember you cannot control another person’s evolution, the most practical and powerful place to work is on your own responses. Shift from selfishness to faith and selflessness."
+      },
+      7: { 
+        title: "Enough: Money & Meaning", 
+        description:  "Money is necessary to support ourselves and our responsibilities, but it can also trap us into feeling a false sense of security. In order to maintain the right relationship with money, we should critically consider: how much money do we truly need? And through what means are we making money?"  
+        },
+      8: { 
+        title: "Intimacy Beyond the Surface", 
+        description:"Much of Vedanta’s advice on intimacy boils down to this - intention supersedes implementation. The most important thing is being disciplined with intimacy - finding the right space, time, and energy that will lead to mutual development. If practiced in the right way, intimacy, physical and beyond, can be a tool for growing past ourselves and our relationships to live for a greater purpose. "
+          },
+      9: { 
+        title: "Shaping Your Circle of Influence", 
+        description: "Married life is a balance of honoring the traditions, family, and friends that have brought us to where we are while also protecting the core bond we share with our partners. When the wishes of family, friends, or society begin to disturb that core bond, it may be time to re-evaluate how we left influence in and where to set loving, steady boundaries."
+          },
+      10: { 
+        title: "Marriage as a Spiritual Practice", 
+          description:  "Vedanta teaches that the purpose of life is to evolve into someone who is independently joyful, and marriage can be one of the best training grounds for that evolution. When lived consciously, marriage can offer a powerful blend of satsang (uplifting companionship), sadhana (accountability in self-development practices), and seva (selfless service)."
+           }
+    };
+
+    // Add a click event listener to each module box
+    moduleBoxes.forEach(box => {
+      box.addEventListener("click", () => {
+        const moduleNumber = box.dataset.module;
+        const content = moduleContent[moduleNumber];
+        
+        // Update the modal's content
+        modalTitle.textContent = content.title;
+        modalDescription.textContent = content.description;
+
+        // Set the "Start Now" button's link
+        modalStartBtn.href = `start.html?module=${moduleNumber}`;
+        
+        // Show the modal
+        modal.style.display = "flex";
+      });
+    });
+
+    // Function to close the modal
+    const closeModal = () => {
+      modal.style.display = "none";
+    };
+
+    // Add click listeners to close the modal
+    closeModalBtn.addEventListener("click", closeModal);
+    window.addEventListener("click", (event) => {
+      if (event.target === modal) {
+        closeModal();
+      }
+    });
+  });
+</script>
 
 
 
