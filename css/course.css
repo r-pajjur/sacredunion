@@ -28,29 +28,37 @@ body {
 .course-header .home-link {
   color: #FFF;
   font-family: "DM Sans";
-  font-size: 2.4rem; /* 24px */
+  font-size: 20px; /* 24px */
   font-weight: 300;
   line-height: 1;
   text-decoration: none;
+  transition: font-color 0.5s;
 
   
 }
+.course-header .home-link:hover {
+  color:#7BC3FF
+}
 .course-header .modules-btn {
-  width: 14.1rem; /* 141px */
-  height: 4.9rem; /* 49px */
+  width: 130px; /* 141px */
+  height: 40px; /* 49px */
   flex-shrink: 0;
   border-radius: 0.6rem; /* 6px */
-  background: #B9DFFF;
+  background: #7BC3FF;
   display: flex;
   justify-content: center;
   align-items: center;
   color: #353635;
   text-align: center;
   font-family: "DM Sans";
-  font-size: 2.4rem; /* 24px */
-  font-weight: 300;
+  font-size: 20px; /* 24px */
   line-height: 1;
   text-decoration: none;
+  transition: background 0.3s;
+  color: white;
+}
+.course-header .modules-btn:hover {
+  background: #7cb7fa;
 }
 
 /* --- Main Content Container --- */
