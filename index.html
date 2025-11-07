@@ -23,44 +23,16 @@
 </head>
 <body>
 
-<script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const warningModal = document.getElementById("mobileWarningModal");
-    const closeModalBtn = document.getElementById("closeWarningModal");
-    
-    // --- UPDATED isMobile FUNCTION ---
-    function isMobile() {
-      const isSmallScreen = window.matchMedia("(max-width: 768px)").matches;
-      
-      // Check for touch capability (maxTouchPoints > 0)
-      const hasTouch = ('maxTouchPoints' in navigator) && (navigator.maxTouchPoints > 0);
-      
-      // Combine touch detection with the small screen size check
-      return isSmallScreen && hasTouch; 
-    }
-    // ----------------------------------
-
-    // Check if it's a mobile device and show the modal
-    if (isMobile()) {
-      warningModal.style.display = "flex";
-    }
-
-    // Hide the modal when the button is clicked
-    closeModalBtn.addEventListener("click", () => {
-      warningModal.style.display = "none";
-    });
-
-    // Optional: Hide the modal if the user resizes their window (or rotates the phone)
-    window.addEventListener('resize', () => {
-      // Re-check the condition on resize
-      if (isMobile()) {
-          warningModal.style.display = "flex";
-      } else {
-          warningModal.style.display = "none";
-      }
-    });
-  });
-</script>
+  <div id="mobileWarningModal" class="warning-modal">
+  <div class="warning-modal-content">
+    <h2>Best Experience Awaits!</h2>
+    <p>
+      It looks like you're on a mobile device. For the most fulfilling experience with the full
+      visual design and interactive modules, please view this page on a **desktop or laptop computer**.
+    </p>
+    <button id="closeWarningModal" class="warning-close-btn">Continue to Site</button>
+  </div>
+</div>
 
   <!-- Navbar -->
   <nav class="navbar">
@@ -781,6 +753,43 @@ Personal growth always starts with self-work. The course addresses this challeng
     window.addEventListener("click", (event) => {
       if (event.target === modal) {
         closeModal();
+      }
+    });
+  });
+</script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const warningModal = document.getElementById("mobileWarningModal");
+    const closeModalBtn = document.getElementById("closeWarningModal");
+    
+    // Function to check if the device is likely mobile/small screen
+    function isMobile() {
+      const isSmallScreen = window.matchMedia("(max-width: 768px)").matches;
+      
+      // Check for touch capability (maxTouchPoints > 0)
+      // This is a much more reliable indicator of a mobile device
+      const hasTouch = ('maxTouchPoints' in navigator) && (navigator.maxTouchPoints > 0);
+      
+      // We require both a small screen size AND touch capability
+      return isSmallScreen && hasTouch; 
+    }
+
+    // Check if it's a mobile device and show the modal
+    if (isMobile()) {
+      // If mobile, change the CSS display property to 'flex' (which shows the modal)
+      warningModal.style.display = "flex";
+    }
+
+    // Event listener to hide the modal when the close button is clicked
+    closeModalBtn.addEventListener("click", () => {
+      warningModal.style.display = "none";
+    });
+
+    // Optional: Hide the modal if the user resizes their window (e.g., rotates tablet to landscape)
+    window.addEventListener('resize', () => {
+      if (!isMobile()) {
+          warningModal.style.display = "none";
       }
     });
   });
