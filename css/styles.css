@@ -1335,3 +1335,58 @@ align-items: center;
   height: 7.7rem; /* 76.589px */
   flex-shrink: 0;
 }
+
+
+/* --- Mobile Warning Modal Styles --- */
+.warning-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7); /* Dark semi-transparent background */
+    display: none; /* Hidden by default - JavaScript will show it */
+    justify-content: center;
+    align-items: center;
+    z-index: 2000; /* Ensure it's above all other elements */
+}
+
+.warning-modal-content {
+    background: #FFF;
+    border-radius: 1rem;
+    padding: 3rem 4rem;
+    max-width: 80%;
+    text-align: center;
+    box-shadow: 0 0.5rem 2rem rgba(0, 0, 0, 0.4);
+}
+
+.warning-modal-content h2 {
+    color: #D21117; /* Use your primary red color */
+    font-family: "Source Serif 4", serif;
+    font-size: 4rem;
+    font-weight: 500;
+    margin-top: 0;
+}
+
+.warning-modal-content p {
+    color: #4B4E53;
+    font-family: "DM Sans", sans-serif;
+    font-size: 2.2rem;
+    line-height: 1.5;
+    margin-bottom: 2.5rem;
+}
+
+.warning-close-btn {
+    background: #7BC3FF; /* Use your primary blue color */
+    color: white;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 0.6rem;
+    font-size: 2rem;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.warning-close-btn:hover {
+    background: #55a8e0;
+}
