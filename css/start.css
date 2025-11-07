@@ -79,7 +79,7 @@ body {
 .start-content p {
   max-width: 56.3rem; /* 563px */
   color: #FFF;
-  font-family: "Source Serif Pro";
+  font-family: "Source Serif 4";
   font-size: 4.8rem; /* 48px */
   font-style: italic;
   font-weight: 400;
@@ -387,7 +387,7 @@ body {
   max-width: 97.1rem; /* 971px */
   color: #FFF;
   text-align: center;
-  font-family: "Source Serif Pro";
+  font-family: "Source Serif 4";
   font-size: 3.2rem; /* 32px */
   font-style: italic;
   font-weight: 600;
@@ -419,7 +419,7 @@ body {
 }
 .login-modal-box h2 {
   color: #D21117;
-  font-family: "Source Serif Pro", serif;
+  font-family: "Source Serif 4", serif;
   font-size: 4.8rem; /* 48px */
   font-style: italic;
   margin: 0 0 1rem 0;
@@ -502,7 +502,7 @@ body {
 
 .footer-text {
   color: #FFF;
-  font-family: "Source Serif Pro", serif;
+  font-family: "Source Serif 4", serif;
   font-size: 3rem; /* 40px */
   font-weight: 400;
   line-height: 1.5; /* Adjusted */
