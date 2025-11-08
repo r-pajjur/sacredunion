@@ -659,7 +659,7 @@ height: 58px;
   width: 85%; /* Adjust size as needed, e.g., 120px */
   height: auto;
   margin-right: 3rem; /* Space between icon and text */
-  transform: translateX(5.1rem) translateY(5rem);
+  transform: translateX(5.1rem) translateY(4.5rem);
 
 }
 .content-right {
