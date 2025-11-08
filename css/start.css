@@ -88,6 +88,19 @@ body {
   transform: translateY(10rem);
 }
 
+.dashboard-icon {
+  width: 500rem; 
+  height: 0rem;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translateY(-7rem);
+
+}
+
+
+
 @keyframes fadeInSlideUp {
   from {
     opacity: 0;
