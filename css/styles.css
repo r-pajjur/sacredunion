@@ -168,13 +168,14 @@ height: 58px;
   width: 158px;
   height: 1px; /* 561px */
   background: #ffffff;
-  transform: translateY(-12rem) translateX(-25rem);
+  transform: translateY(-18rem) translateX(-25rem);
 }
 
 .deeper-line {
   width: 900px;
   height: 1px; /* 561px */
-  background: #E10606;
+  background: white;
+  /* transform: translateY(-11.85rem) translateX(-3rem); */
   transform: translateY(-11.85rem) translateX(-3rem);
 }
 
@@ -818,11 +819,11 @@ height: 58px;
 }
 .left-caption {
   text-align: right;
-  transform: translateY(5rem) translateX(-5rem); /* 50px, 20px */
+  transform: translateY(2rem) translateX(-5rem); /* 50px, 20px */
 }
 .right-caption {
   text-align: left;
-  transform: translateY(-70rem) translateX(-2rem); /* 700px, 20px */
+  transform: translateY(-75rem) translateX(-2rem); /* 700px, 20px */
 }
 
 /* why did we Create Section */
@@ -838,12 +839,12 @@ height: 58px;
 }
 
 .card-icon {
-  width: 181.5rem; /* 1216px */
-  height: 84rem; /* 561px */
+  width: 216rem; /* 1216px */
+  height: 100rem; /* 561px */
   position: relative; /* Keeps it in the flow of the flexbox */
   flex-direction: column;
   align-items: center;
-  transform: translateY(-45rem) translateX(20rem); 
+  transform: translateY(-45rem) translateX(10rem); 
 }
 
 
@@ -869,7 +870,7 @@ height: 58px;
   height: 84rem; /* 561px */
   border-radius: 1rem; /* 10px */
   background: #7BC3FF;
-  box-shadow: 0 1rem 2rem 1.5rem rgba(221, 206, 206, 0.25);
+  /* box-shadow: 0 1rem 2rem 1.5rem rgba(221, 206, 206, 0.25); */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -890,6 +891,7 @@ height: 58px;
   line-height: 8rem; /* 80px */
   letter-spacing: -0.3rem; /* -3px */
   margin: 0;
+  transform: translateY(5rem);
 }
 .create-content {
   display: flex;
@@ -906,7 +908,7 @@ height: 58px;
   line-height: 5rem; /* 28px */
   letter-spacing: 0.025rem; /* 0.25px */
   margin: 0;
-  transform: translateY(10rem);
+  transform: translateY(20rem);
 }
 
 
@@ -1136,7 +1138,7 @@ height: 58px;
   font-weight: 400;
   line-height: 8rem; /* 80px */
   letter-spacing: -0.3rem; /* -3px */
-  margin: -3rem 0 0 0; /* -30px */
+  margin: -6rem 0 0 0; /* -30px */
 }
 .donation-subtitle {
   width: 107.1rem; /* 1071px */
@@ -1147,12 +1149,12 @@ height: 58px;
   color: #FFF;
   text-align: center;
   font-family: "DM Sans", sans-serif;
-  font-size: 3rem; /* 40px */
+  font-size: 2.5rem; /* 40px */
   font-style: normal;
   font-weight: 400;
   line-height: 3.5rem; /* 35px */
   letter-spacing: 0.025rem; /* 0.25px */
-  margin: -1rem 0 0 0;
+  margin: 3rem 0 0 0;
 }
 .donation-subtitle strong {
   font-weight: 600;
