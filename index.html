@@ -76,15 +76,11 @@
       <div class="deeper-line"></div>
       <div class="deeper-line2"></div>
       <p class="body-text">
-        This course transforms your relationship from routine 
-        into a sacred opportunity for profound mutual growth, 
-        moving deeper than "I do." It guides partners to become 
-        independently joyful together, balancing material, emotional, 
-        and spiritual goals to create a shared, meaningful vision. 
-        Over 10 modules, you will gain practical tools for navigating 
-        conflict with emotional safety and achieving lasting intimacy. 
-        Commit to this journey to ensure your marriage remains a powerful 
-        ground for spiritual evolution and inner joy.
+        Sacred Union is for couples who don’t want their marriage to 
+        slip into routine, but to become a sacred place for mutual 
+        growth. Across ten workshops, you’ll learn to balance material, 
+        emotional, and spiritual needs, navigate conflict with more 
+        safety, and deepen intimacy with purpose.
       </p>
       <a href="start.html" class="deeperStart-btn">dive deeper</a>
       <div class="ancient-divider"></div>
@@ -146,11 +142,7 @@
             <div class="ancient-text">
               <h3 class="ancient-headline">The science <br> of Oneness</h3>
               <p class="ancient-subtitle">
-                Vedānta defines marriage (Vivāha) as a "special upliftment" rather than a mere societal contract. 
-                This "science of Oneness" shifts the focus from routine to evolution, transforming 
-                the union into a sacred partnership where the growth of one soul inherently 
-                supports the evolution of the other.
-              </p>
+                Advaita Vedānta,, the science of Oneness, sits at the heart of Sacred Union because it speaks to the deepest question beneath every relationship: “Who am I, really, and what am I seeking through this love?” It turns marriage from a search for someone to complete us into a shared path.</p>
             </div>
 
             <!-- Divider + icon -->
@@ -193,25 +185,25 @@
       <div class="module-box" data-module="2"><div class="module-circle">
           <img src="logos/whiteLineRedDot.png" alt="Module Icon" class="module-icon">
         </div></div>
-      <div class="module-label">EVOLVE</div>
+      <div class="module-label">EVOLVING</div>
     </div>
     <div class="module-container">
       <div class="module-box" data-module="3"><div class="module-circle">
           <img src="logos/whiteLineRedDot.png" alt="Module Icon" class="module-icon">
         </div></div>
-      <div class="module-label">PARTNER</div>
+      <div class="module-label">IDEALS</div>
     </div>
     <div class="module-container">
       <div class="module-box" data-module="4"><div class="module-circle">
           <img src="logos/whiteLineRedDot.png" alt="Module Icon" class="module-icon">
         </div></div>
-      <div class="module-label">EMOTION</div>
+      <div class="module-label">EMOTIONS</div>
     </div>
     <div class="module-container">
       <div class="module-box" data-module="5"><div class="module-circle">
           <img src="logos/whiteLineRedDot.png" alt="Module Icon" class="module-icon">
         </div></div>
-      <div class="module-label">LISTEN</div>
+      <div class="module-label">DIALOGUE</div>
     </div>
   </div>
 
@@ -267,6 +259,7 @@
 
 </section>
 
+<!-- Change Section -->
 
 <section class="change-section">
   <h1 class="change-title">
@@ -283,12 +276,15 @@
 
   <div class="change-content" id="changeContent">
     <div class="content-left">
+      
       <h2 id="contentTitle">watch ↑</h2>
       <p id="contentText">
         Watch the core video discourse by our guides, which systematically unpacks the Vedantic concepts central to the module's lesson.   
       </p>
     </div>
-    <div class="content-right"></div>
+    <div class="content-right">
+      <img src="images/watch.jpeg" alt="Watch icon" class="content-icon" id="contentIcon">
+    </div>
   </div>
 </section>
 
@@ -296,12 +292,30 @@
   const boxes = document.querySelectorAll(".change-box");
   const titleEl = document.getElementById("contentTitle");
   const textEl = document.getElementById("contentText");
+  // Get the new image element
+  const iconEl = document.getElementById("contentIcon"); 
 
   const content = {
-    watch: "Watch the core video discourse by our guides, which systematically unpacks the Vedantic concepts central to the module's lesson.",
-    read: "Read the supporting literature and scriptural references, designed to reinforce the video's concepts.",
-    practice: "Practice the daily actions assigned for the module, intended for both individual and mutual participation with your partner.",
-    internalize: "Internalize the teaching through reflection and journaling, observing how the concepts and practices are reshaping your thoughts and reactions."
+    watch: {
+        text: "Watch the core video discourse by our guides, which systematically unpacks the Vedantic concepts central to the module's lesson.",
+        imageSrc: "images/watch.jpeg",
+        imageAlt: "Watch icon"
+    },
+    read: {
+        text: "Read the supporting literature and scriptural references, designed to reinforce the video's concepts.",
+        imageSrc: "read.jpeg",
+        imageAlt: "Read icon"
+    },
+    practice: {
+        text: "Practice the daily actions assigned for the module, intended for both individual and mutual participation with your partner.",
+        imageSrc: "practice.jpeg",
+        imageAlt: "Practice icon"
+    },
+    internalize: {
+        text: "Internalize the teaching through reflection and journaling, observing how the concepts and practices are reshaping your thoughts and reactions.",
+        imageSrc: "internalize.jpeg",
+        imageAlt: "Internalize icon"
+    }
   };
 
   boxes.forEach((box) => {
@@ -310,8 +324,13 @@
       box.classList.add("active");
 
       const topic = box.dataset.topic;
+      const data = content[topic]; // Get the full data object
+
       titleEl.textContent = `${topic} ↑`;
-      textEl.textContent = content[topic];
+      textEl.textContent = data.text;
+      // Update the image source and alt text
+      iconEl.src = data.imageSrc;
+      iconEl.alt = data.imageAlt; 
     });
   });
 </script>

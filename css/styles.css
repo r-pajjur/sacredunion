@@ -239,7 +239,7 @@ height: 58px;
   width: 640px;
   margin-left: 30px;
   transform: translateY(-13rem);
-  text-align: justify;
+  text-align: left;
 
 }
 
@@ -365,7 +365,7 @@ height: 58px;
   text-align: left;
   padding-left: 5rem; /* 40px */
   transform: translateY(-10rem);
-  width: 70rem;
+  width: 90rem;
 }
 .ancient-divider {
   display: flex;
@@ -655,6 +655,13 @@ height: 58px;
   padding: 3rem 4rem;
   text-align: left;
 }
+.content-icon {
+  width: 85%; /* Adjust size as needed, e.g., 120px */
+  height: auto;
+  margin-right: 3rem; /* Space between icon and text */
+  transform: translateX(5.1rem) translateY(5rem);
+
+}
 .content-right {
   flex: 6.5%;
   background: #C2DFFE;
@@ -696,6 +703,10 @@ height: 58px;
   background: #a10e13; /* A slightly darker red for the active state on hover */
   box-shadow: 0 5px 2rem rgba(0, 0, 0, 0.3);
 }
+
+/*photos for change section*/
+
+
 
 /* Guides Section */
 .guides-section {
