@@ -615,3 +615,7 @@ body.fullscreen-active {
 .pseudo-fullscreen .next-tab {
   right: 3rem; /* Give more space from edge */
 }
+/* --- HIDE FEEDBACK WIDGET DURING FULLSCREEN --- */
+body.fullscreen-active .feedback-widget {
+  display: none;
+}
