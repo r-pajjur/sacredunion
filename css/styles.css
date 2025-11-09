@@ -1407,6 +1407,31 @@ align-items: center;
     background: #55a8e0;
 }
 
+/* Add this new CSS block for the mobile lock screen */
+.mobile-lock {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: black; /* Full black screen */
+    color: white; /* Text color for the warning */
+    z-index: 99999; /* Ensure it covers everything, including other modals */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    /* Optional: Hide body scrollbar if necessary */
+    overflow: hidden; 
+}
+
+.mobile-lock p {
+    font-size: 2.5rem;
+    font-family: "DM Sans", sans-serif;
+    padding: 2rem;
+}
+
 
 
 
