@@ -1412,10 +1412,10 @@ align-items: center;
     position: fixed;
     top: 0;
     left: 0;
-    width: 150%;
-    height: 150%;
+    width: 120%;
+    height: 120%;
     background-color: white; /* Full black screen */
-    color: #7BC3FF; /* Text color for the warning */
+    color: #ffffff; /* Text color for the warning */
     z-index: 99999; /* Ensure it covers everything, including other modals */
     display: flex;
     flex-direction: column;
@@ -1430,7 +1430,7 @@ align-items: center;
     font-size: 2.5rem;
     font-family: "DM Sans", sans-serif;
     padding: 2rem;
-    background: #D21117;
+    background: #7BC3FF;
     flex-direction: column;
     justify-content: center;
     align-items: center;
