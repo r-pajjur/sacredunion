@@ -619,3 +619,136 @@ body.fullscreen-active {
 body.fullscreen-active .feedback-widget {
   display: none;
 }
+
+/* --- MODAL STYLES --- */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: none; /* Initially hidden */
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+  animation: fadeInModal 0.3s ease-out;
+}
+
+@keyframes fadeInModal {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.modal-content {
+  background: #D21117;
+  padding: 4rem;
+  border-radius: 1.2rem;
+  width: 90%;
+  max-width: 60rem; /* Max width 600px */
+  text-align: center;
+  color: white;
+  position: relative;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.5);
+  animation: slideInModal 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+@keyframes slideInModal {
+  from { transform: translateY(-50px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+.close-modal {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  background: none;
+  border: none;
+  font-size: 4rem;
+  color: white;
+  cursor: pointer;
+  line-height: 1;
+  opacity: 0.8;
+  transition: opacity 0.2s;
+}
+
+.close-modal:hover {
+  opacity: 1;
+}
+
+.modal-text-1 {
+  font-family: "Source Serif 4", serif;
+  font-size: 2.4rem;
+  font-style: italic;
+  font-weight: 500;
+  line-height: 1.4;
+  margin-bottom: 2rem;
+}
+
+.modal-text-2 {
+  font-family: "DM Sans", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 1.5;
+  margin-bottom: 3rem;
+}
+
+.modal-donate-btn {
+  /* Existing styles are good, but ensuring font-size is absolute here */
+  width: 100%;
+  max-width: 45.4rem; 
+  height: 6.9rem; 
+  flex-shrink: 0;
+  background: #FFF;
+  border-radius: 0.8rem;
+  display: inline-flex; /* Changed from flex to inline-flex for centering */
+  justify-content: center;
+  align-items: center;
+  color: #D21117;
+  text-align: center;
+  font-family: Inter, sans-serif;
+  font-size: 2.8rem;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: 0.025rem;
+  text-decoration: none;
+  transition: transform 0.2s ease;
+}
+.modal-donate-btn:hover {
+  transform: scale(1.03); /* Slightly reduced scale for better feel */
+}
+
+.modal-footer {
+  margin-top: 2rem;
+  font-family: "Source Serif 4", serif;
+  font-size: 1.4rem;
+  font-style: italic;
+  opacity: 0.8;
+}
+
+/* --- THE START/ACCESS BUTTON (under content) --- */
+.start-button {
+  width: 100%;
+  max-width: 40rem; /* A good, manageable width */
+  height: 6.9rem;
+  background: #7BC3FF;
+  border-radius: 0.8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #FFF;
+  text-align: center;
+  font-family: "DM Sans";
+  font-size: 2.8rem;
+  line-height: 1;
+  text-decoration: none;
+  transition: background 0.3s, transform 0.2s;
+  cursor: pointer;
+  margin: 5rem auto 0 auto; /* Centered with top margin */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.start-button:hover {
+  background: #a10e13;
+  transform: translateY(-2px);
+}

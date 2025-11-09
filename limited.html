@@ -206,8 +206,30 @@
           </div>
         </div>
       </div>
+
+      <div class="modal-overlay" id="donateModal">
+    <div class="modal-content">
+      <button class="close-modal" aria-label="Close modal">&times;</button>
       
-    </div> <svg class="deco-svg" width="147" height="145" viewBox="0 0 147 145" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <p class="modal-text-1">
+        this is the beginning of a new you. <br><br>
+        Your investment is a commitment to your self-development, which enables access to all workshops, indefinitely. Thank you for your commitment.
+      </p>
+
+      <p class="modal-text-2">
+        Please send a confirmation of your contribution to oursacredunion@gmail.com. Upon receipt, you will receive your login information you can use for all workshops.
+      </p>
+
+      <a href="https://www.paypal.com/ncp/payment/9YPUDWH7JN63N" class="modal-donate-btn" target="_blank">Access all the modules</a>
+      <p class="modal-footer">
+        ancient wisdom brought to you with ♡
+      </p>
+    </div>
+  </div>
+
+      
+    </div> 
+    <svg class="deco-svg" width="147" height="145" viewBox="0 0 147 145" fill="none" xmlns="http://www.w3.org/2000/svg">
       <circle cx="73.8124" cy="72.2597" r="70.7597" stroke="#D21117" stroke-width="3"/>
       <path d="M73.5547 71.179C99.1531 71.179 119.282 87.5676 119.282 107.099C119.282 126.63 99.1532 143.02 73.5547 143.02C47.9563 143.02 27.8281 126.63 27.8281 107.099C27.8283 87.5676 47.9564 71.1791 73.5547 71.179Z" stroke="#D21117" stroke-width="3"/>
       <path d="M73.5547 2.01614C99.1531 2.01614 119.282 18.4047 119.282 37.9361C119.282 57.4675 99.1532 73.857 73.5547 73.857C47.9563 73.8568 27.8281 57.4674 27.8281 37.9361C27.8283 18.4048 47.9564 2.01627 73.5547 2.01614Z" stroke="#D21117" stroke-width="3"/>
@@ -215,6 +237,8 @@
       <path d="M74.347 73.0635C73.7922 98.6559 56.9712 118.425 37.4445 118.002C17.9176 117.579 1.96824 97.0991 2.52302 71.5066C3.07791 45.9142 19.8997 26.1459 39.4265 26.5692C58.9532 26.9927 74.9016 47.4712 74.347 73.0635Z" stroke="#D21117" stroke-width="3"/>
       <circle cx="73.8057" cy="72.2597" r="18.5811" fill="#C2DFFE"/>
     </svg>
+
+    <a href="#" class="start-button donate-trigger">get access to all modules</a>
 
   </main>
 
@@ -330,17 +354,10 @@
           });
         }
         
-        // --- 4. "Own Pace" Toggle Event ---
-        // if (ownPaceToggle) { // Check if it exists
-        //   ownPaceToggle.onclick = () => {
-        //     ownPaceContent.classList.toggle("open");
-        //     const isOpening = ownPaceContent.classList.contains("open");
-        //     ownPaceToggle.textContent = isOpening ? "prefer to go at your own pace? ↑" : "prefer to go at your own pace? ↓";
-        //   };
-        // }
+        // --- 4. "Own Pace" Toggle Event (No Action since commented out) ---
 
         // --- 5. Show default tab for this module ---
-        showTab(1); // Default to "OVERVIEW"
+        showTab(1); // Default to first tab (1)
       }
 
       // --- 1. Module Click Events (Main Controller) ---
@@ -357,6 +374,43 @@
       // Show module from URL, or default to module 0
       showModule(moduleFromUrl || 0);
       
+      
+      // ===================================
+      // ✨ NEW MODAL CONTROLLER LOGIC
+      // ===================================
+      const modalOverlay = document.getElementById("donateModal");
+      const donateTriggers = document.querySelectorAll(".donate-trigger");
+      const closeModalBtn = modalOverlay.querySelector(".close-modal");
+
+      function openModal() {
+        modalOverlay.style.display = "flex";
+        document.body.style.overflow = "hidden"; // Prevent body scrolling
+      }
+
+      function closeModal() {
+        modalOverlay.style.display = "none";
+        document.body.style.overflow = ""; // Re-enable body scrolling
+      }
+      
+      // Open modal on trigger click
+      donateTriggers.forEach(btn => {
+        btn.addEventListener("click", (e) => {
+          e.preventDefault(); // Stop the default link behavior
+          openModal();
+        });
+      });
+
+      // Close modal on button click
+      closeModalBtn.addEventListener("click", closeModal);
+
+      // Close modal on background click
+      modalOverlay.addEventListener("click", (e) => {
+        if (e.target === modalOverlay) {
+          closeModal();
+        }
+      });
+      // ===================================
+
     });
   </script>
 
