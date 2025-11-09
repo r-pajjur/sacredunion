@@ -164,37 +164,6 @@ body {
   color: #7BC3FF;
   border-bottom-color: #7BC3FF;
 }
-.tab-window-container {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  width: 100%;
-  max-width: 130rem; /* 1300px */
-  margin: 0 auto;
-}
-.tab-arrow {
-  font-size: 4.8rem; /* 48px */
-  color: #CBCBCB;
-  cursor: pointer;
-  user-select: none;
-  font-weight: bold;
-}
-.tab-arrow:hover {
-  color: #8E8E8E;
-}
-.tab-content-window {
-  width: 100%;
-  max-width: 120.5rem; /* 1205px */
-  height: 47rem; /* 470px */
-  background: #7BC3FF;
-  margin-top: 1px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-  flex-grow: 1;
-  position: relative; /* Needed for the absolute-positioned button */
-}
 
 /* --- Tab Pane Content Styling --- */
 .tab-pane {
@@ -371,25 +340,6 @@ body {
 }
 
 /* --- Alternative: Resizing Box --- */
-.tab-content-window {
-  width: 100%;
-  max-width: 120.5rem;
-  height: auto; /* <-- CHANGED */
-  min-height: 47rem; /* Keeps other tabs looking right */
-  
-  /* --- CHANGED --- */
-  background: #FFFFFF; /* 1. Set background to white */
-  border: 10px solid #7BC3FF; /* 2. Add your blue border */
-  border-radius: 8px; /* 3. (Optional) Add rounded corners */
-  box-sizing: border-box; /* 4. (Important) Include border in the size */
-  
-  margin-top: 1px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-  flex-grow: 1;
-}
 
 /* Make the image tab pane's height automatic */
 .tab-pane[data-tab-content="1"] {
@@ -469,6 +419,85 @@ body {
   /* Optional: you can adjust padding if your form looks too cramped */
 }
 
+/* ===============================
+   UPDATED TAB & ARROW STYLES
+   =============================== */
+
+/* --- Tab System --- */
+.tab-window-container {
+  /* REMOVED: display:flex, align-items:center, gap:1rem */
+  width: 100%;
+  max-width: 130rem; /* 1300px */
+  margin: 0 auto;
+  /* This container is now just a simple wrapper */
+}
+
+/* The content window is already relative, which is perfect */
+.tab-content-window {
+  width: 100%;
+  max-width: 120.5rem;
+  height: auto;
+  min-height: 47rem;
+  background: #FFFFFF;
+  border: 10px solid #7BC3FF;
+  border-radius: 8px;
+  box-sizing: border-box;
+  margin: 1px auto 0 auto; /* Centered */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  flex-grow: 1;
+  position: relative; /* Stays relative */
+}
+
+/* --- REPLACED ARROW STYLES --- */
+.tab-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 5; /* Below fullscreen btn (10), above content (auto) */
+  font-size: 4.8rem;
+  color: #CBCBCB;
+  cursor: pointer;
+  user-select: none;
+  font-weight: bold;
+  
+  /* Make them appear on hover */
+  opacity: 1;
+  /* transition: all 0.3s ease; */
+  
+  /* Add a background for visibility */
+  /* background: rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  width: 5rem; 
+  height: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 0.5rem;
+  box-sizing: border-box; */
+}
+
+/* Show arrows when hovering over the content window */
+/* .tab-content-window:hover .tab-arrow {
+  opacity: 0.7;
+}
+
+.tab-arrow:hover {
+  opacity: 1;
+  color: #8E8E8E;
+  background: rgba(0, 0, 0, 0.2);
+} */
+
+.prev-tab {
+  left: 1.5rem;
+}
+
+.next-tab {
+  right: 1.5rem;
+}
+
 
 /* ===============================
    NEW: PSEUDO-FULLSCREEN STYLES
@@ -479,7 +508,7 @@ body {
   position: absolute;
   bottom: 1.5rem;
   right: 1.5rem;
-  z-index: 10; /* Above tab content, below modal/etc. */
+  z-index: 10; /* Above tab content and arrows */
   width: 4rem;
   height: 4rem;
   background: rgba(0, 0, 0, 0.2);
@@ -564,4 +593,25 @@ body.fullscreen-active {
   max-height: 100%;
   aspect-ratio: 16 / 9; /* Maintain aspect ratio */
   border-radius: 0; /* Remove border in fullscreen */
+}
+
+/* --- 5. STYLES FOR ARROWS IN FULLSCREEN MODE --- */
+.pseudo-fullscreen .tab-arrow {
+  opacity: 0.6; /* Always visible in fullscreen */
+  color: #FFF;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.pseudo-fullscreen .tab-arrow:hover {
+  opacity: 1;
+  color: #FFF;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.pseudo-fullscreen .prev-tab {
+  left: 3rem; /* Give more space from edge */
+}
+
+.pseudo-fullscreen .next-tab {
+  right: 3rem; /* Give more space from edge */
 }
