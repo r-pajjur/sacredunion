@@ -1414,8 +1414,8 @@ align-items: center;
     left: 0;
     width: 150%;
     height: 150%;
-    background-color: black; /* Full black screen */
-    color: white; /* Text color for the warning */
+    background-color: white; /* Full black screen */
+    color: #7BC3FF; /* Text color for the warning */
     z-index: 99999; /* Ensure it covers everything, including other modals */
     display: flex;
     flex-direction: column;
@@ -1431,6 +1431,10 @@ align-items: center;
     font-family: "DM Sans", sans-serif;
     padding: 2rem;
     background: #D21117;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
 
