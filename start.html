@@ -408,16 +408,15 @@
 
         if (username === "admin" && password === "apaaradmin") {
           window.location.href = "dashboard.html";
-        } else {
-          loginError.textContent = "Invalid username or password.";
-          loginError.style.display = "block";
-        }
-        if (username === "anuPajjur" && password === "S203QBMt") {
+        } 
+        else if (username === "anuPajjur" && password === "S203QBMt") {
           window.location.href = "dashboard.html";
-        } else {
+        }
+        else {
           loginError.textContent = "Invalid username or password.";
           loginError.style.display = "block";
         }
+         
       });
 
       // --- NEW: Donation Modal Script ---
