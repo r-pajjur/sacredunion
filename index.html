@@ -820,7 +820,48 @@ You can still start. Sacred Union can be done on your own, and as you grow in cl
     // Note: The original mobileWarningModal element is now redundant and can be removed 
     // from your HTML if this new permanent blackout is the final desired behavior.
   });
+
+  document.addEventListener("DOMContentLoaded", () => {
+  const bogoOverlay = document.getElementById("bogoOverlay");
+  const closeBogo = document.getElementById("closeBogo");
+
+  // Show the popup after 4 seconds (to give them time to see the hero section)
+  // But only if they haven't seen it this session
+  if (!sessionStorage.getItem('bogoShown')) {
+    setTimeout(() => {
+      bogoOverlay.style.display = "flex";
+      sessionStorage.setItem('bogoShown', 'true');
+    }, 4000); 
+  }
+
+  // Close functionality
+  closeBogo.addEventListener("click", () => {
+    bogoOverlay.style.display = "none";
+  });
+
+  // Close if clicking outside the modal
+  window.addEventListener("click", (event) => {
+    if (event.target === bogoOverlay) {
+      bogoOverlay.style.display = "none";
+    }
+  });
+});
 </script>
+
+<div id="bogoOverlay" class="bogo-overlay" style="display: none;">
+  <div class="bogo-modal">
+    <button id="closeBogo" class="bogo-close">&times;</button>
+    <div class="bogo-tag">Special Offering</div>
+    <h2 class="bogo-title">Buy One, <em>Gift</em> One</h2>
+    <p class="bogo-description">
+      When you commit to your Sacred Union today, we invite you to <strong>gift a full enrollment</strong> to another couple at no extra cost. 
+    </p>
+    <p class="bogo-subtext">Spread the wisdom of Oneness.</p>
+    <div class="bogo-footer">
+      <a href="start.html?promo=bogo" class="bogo-btn">Claim this offer</a>
+    </div>
+  </div>
+</div>
 
 
 </body>

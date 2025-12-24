@@ -1437,6 +1437,103 @@ align-items: center;
     text-align: center;
 }
 
+/* BOGO Popup Styles */
+.bogo-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 3000; /* Above everything else */
+}
+
+.bogo-modal {
+  background: white;
+  width: 90%;
+  max-width: 550px;
+  padding: 4rem;
+  border-radius: 1.5rem;
+  position: relative;
+  text-align: center;
+  box-shadow: 0 2rem 5rem rgba(0,0,0,0.3);
+  animation: bogoScaleUp 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+@keyframes bogoScaleUp {
+  from { opacity: 0; transform: scale(0.8); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.bogo-close {
+  position: absolute;
+  top: 1.5rem;
+  right: 2rem;
+  background: none;
+  border: none;
+  font-size: 3rem;
+  color: #ccc;
+  cursor: pointer;
+  line-height: 1;
+}
+
+.bogo-close:hover { color: #D21117; }
+
+.bogo-tag {
+  background: #7BC3FF;
+  color: white;
+  display: inline-block;
+  padding: 0.5rem 1.5rem;
+  font-size: 1.6rem;
+  text-transform: lowercase;
+  border-radius: 2rem;
+  margin-bottom: 2rem;
+}
+
+.bogo-title {
+  font-family: "Source Serif 4", serif;
+  font-size: 5.5rem;
+  color: #D21117;
+  margin: 0 0 1.5rem 0;
+  line-height: 1.1;
+}
+
+.bogo-title em { font-style: italic; }
+
+.bogo-description {
+  font-family: "Inter", sans-serif;
+  font-size: 2.2rem;
+  color: #4B4E53;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+
+.bogo-subtext {
+  font-family: "Source Serif 4", serif;
+  font-style: italic;
+  font-size: 1.8rem;
+  color: #7BC3FF;
+  margin-bottom: 3rem;
+}
+
+.bogo-btn {
+  display: inline-block;
+  background: #D21117;
+  color: white;
+  padding: 1.5rem 4rem;
+  font-size: 2.2rem;
+  text-decoration: none;
+  border-radius: 0.6rem;
+  font-family: "DM Sans", sans-serif;
+  transition: background 0.3s ease;
+}
+
+.bogo-btn:hover { background: #a10e13; }
+
 
 
 
